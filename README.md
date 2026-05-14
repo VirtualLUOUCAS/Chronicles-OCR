@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="README_ZH.md">中文版</a> •
-  <a href="https://arxiv.org/abs/2603.23885">Paper</a> •
+  <a href="https://arxiv.org/abs/2605.11960">Paper</a> •
   <a href="https://github.com/VirtualLUOUCAS/Chronicles-OCR">GitHub</a> •
   <a href="https://huggingface.co/datasets/VirtualLUO/Chronicles-OCR">HuggingFace</a>
 </p>
@@ -21,15 +21,17 @@ Curated in collaboration with top-tier institutional domain experts (the Key Lab
 
 ## The Seven Chinese Scripts
 
-| Script | Period | Physical Media |
-|--------|--------|----------------|
-| Oracle Bone (甲骨文) | ~1300–1046 BCE | Tortoise shells, animal bones |
-| Bronze (金文) | 1046–256 BCE | Ceremonial bronze vessels |
-| Seal (篆书) | 221–200 BCE | Steles, official documents |
-| Clerical (隶书) | 250 BCE–220 CE | Wooden slips, steles |
-| Regular (楷书) | 150–600 CE | Paper, steles |
-| Cursive (草书) | 100 BCE–700 CE | Paper, calligraphic scrolls |
-| Running (行书) | 150–400 CE | Paper, calligraphic scrolls |
+The **"Seven Chinese Scripts" (汉字七体)** refer to the seven canonical script forms that emerged throughout the evolution of Chinese characters over more than 5,000 years:
+
+1. **Oracle Bone Script (甲骨文)** — The earliest known mature Chinese writing system, carved on tortoise shells and animal bones during the Shang Dynasty. Characters feature strong pictographic qualities with thin, angular strokes and unstandardized layouts.
+2. **Bronze Script (金文)** — Cast on ceremonial bronze vessels during the Shang and Zhou Dynasties. Strokes are thicker and rounder, with progressively more regularized and aesthetic structures.
+3. **Seal Script (篆书)** — Standardized after the Qin unification of China. Features pronounced curvilinear symmetry and fixed structural patterns, marking the transition from regional variants to a unified writing system.
+4. **Clerical Script (隶书)** — Emerged during the Qin–Han transition, flattening characters and replacing curves with angular strokes. Represents a critical turning point — the watershed between ancient and modern Chinese characters.
+5. **Regular Script (楷书)** — Established in the late Han and Wei-Jin periods with strict square structures and standardized strokes. Remains the dominant formal script to this day.
+6. **Cursive Script (草书)** — Developed for rapid, informal writing. Uses continuous, connected strokes that often eliminate independent character boundaries, ranging from the restrained Zhang Cao to the unbounded Kuang Cao.
+7. **Running Script (行书)** — A fluid yet legible intermediate style between Regular and Cursive scripts, widely used from the Eastern Han Dynasty onward. Wang Xizhi's *Preface to the Orchid Pavilion* is its most celebrated exemplar.
+
+Among these, the first five (Oracle Bone → Regular) successively served as formal writing systems in their respective eras, while Cursive and Running scripts developed primarily as auxiliary styles for informal and rapid writing.
 
 ## Benchmark Statistics
 
@@ -191,8 +193,8 @@ python summarize.py
       title={Chronicles-OCR: A Cross-Temporal Perception Benchmark for the Evolutionary Trajectory of Chinese Characters},
       author={Gengluo Li and Shangping Peng and Xingyu Wan and Chengquan Zhang and Hao Feng and Xin Xu and Pian Wu and Bang Li and Zengmao Ding and Yongge Liu and Yipei Ye and Yang Yang and Zhan Shu and Guojun Yan and Zhe Li and Can Ma and Weiping Wang and Yu Zhou and Han Hu},
       year={2026},
-      journal={arXiv preprint arXiv:2603.23885},
-      url={https://arxiv.org/abs/2603.23885},
+      journal={arXiv preprint arXiv:2605.11960},
+      url={https://arxiv.org/abs/2605.11960},
 }
 ```
 

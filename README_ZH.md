@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="README.md">English</a> •
-  <a href="https://arxiv.org/abs/2603.23885">论文</a> •
+  <a href="https://arxiv.org/abs/2605.11960">论文</a> •
   <a href="https://github.com/VirtualLUOUCAS/Chronicles-OCR">GitHub</a> •
   <a href="https://huggingface.co/datasets/VirtualLUO/Chronicles-OCR">HuggingFace</a>
 </p>
@@ -21,15 +21,17 @@
 
 ## 汉字七体
 
-| 书体 | 年代 | 物理载体 |
-|------|------|----------|
-| 甲骨文 | 约公元前1300–1046年 | 龟甲、兽骨 |
-| 金文 | 公元前1046–256年 | 青铜礼器 |
-| 篆书 | 公元前221–200年 | 碑刻、官方文书 |
-| 隶书 | 公元前250年–公元220年 | 木简、碑刻 |
-| 楷书 | 公元150–600年 | 纸本、碑刻 |
-| 草书 | 公元前100年–公元700年 | 纸本、书法长卷 |
-| 行书 | 公元150–400年 | 纸本、书法长卷 |
+**"汉字七体"** 是指汉字在五千余年演变历程中出现的七种代表性字体：
+
+1. **甲骨文** — 殷商时代刻写在龟甲兽骨上的文字，是中国已知最早的成熟汉字。象形性较强，写法不固定，由细瘦线条构成，多直笔，外形参差不齐。
+2. **金文（钟鼎文）** — 主要在商周时期铸刻于青铜礼器之上。笔画粗而宽，点画圆浑，体势雍容，比甲骨文更为规范，结构更加整齐。
+3. **篆书** — 秦统一六国后推行的标准字体。笔画圆转，具有显著的曲线对称性和固定的结构模式，标志着从各地异体到统一书写体系的转变。
+4. **隶书** — 产生于秦汉之际，字形扁平，以方折棱角取代了圆转笔画，形成"一波三折、蚕头燕尾"的特征。隶书是汉字演变史上的重要转折点，是古文字与今文字的分水岭。
+5. **楷书** — 兴于汉末魏晋，字形方正，笔画规整平直，书写简便。自南北朝后成为主导字体，通行至今。
+6. **草书** — 为快速书写而生的辅助性字体。笔画连带、结体简约、气势连贯，从章草到今草再到狂草，字形日趋奔放，常消除独立字符边界。
+7. **行书** — 介于楷书与草书之间的流畅书体，兼具可读性与书写效率，自东汉末年产生并沿用至今。王羲之《兰亭集序》为其最负盛名的代表作。
+
+其中，前五体（甲骨文→楷书）先后作为各自时代的正式书写系统，而草书与行书主要作为非正式场合的辅助性字体发展演变。
 
 ## 基准统计
 
@@ -191,8 +193,8 @@ python summarize.py
       title={Chronicles-OCR: A Cross-Temporal Perception Benchmark for the Evolutionary Trajectory of Chinese Characters},
       author={Gengluo Li and Shangping Peng and Xingyu Wan and Chengquan Zhang and Hao Feng and Xin Xu and Pian Wu and Bang Li and Zengmao Ding and Yongge Liu and Yipei Ye and Yang Yang and Zhan Shu and Guojun Yan and Zhe Li and Can Ma and Weiping Wang and Yu Zhou and Han Hu},
       year={2026},
-      journal={arXiv preprint arXiv:2603.23885},
-      url={https://arxiv.org/abs/2603.23885},
+      journal={arXiv preprint arXiv:2605.11960},
+      url={https://arxiv.org/abs/2605.11960},
 }
 ```
 
