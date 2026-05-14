@@ -1,3 +1,8 @@
 .workbuddy/
 __pycache__/
 *.pyc
+Opensource_data/
+Opensource_final.zip
+infer_results/
+judge_results/
+
