@@ -6,7 +6,8 @@
   <a href="README_ZH.md">中文版</a> •
   <a href="https://arxiv.org/abs/2605.11960">Paper</a> •
   <a href="https://github.com/VirtualLUOUCAS/Chronicles-OCR">GitHub</a> •
-  <a href="https://huggingface.co/datasets/VirtualLUO/Chronicles-OCR">HuggingFace</a>
+  <a href="https://huggingface.co/datasets/VirtualLUO/Chronicles-OCR">HuggingFace</a> •
+  <a href="https://modelscope.cn/datasets/VirtualLUO/Chronicles-OCR">ModelScope</a>
 </p>
 
 ## Overview
