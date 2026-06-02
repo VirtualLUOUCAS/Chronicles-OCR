@@ -12,9 +12,6 @@ Usage:
         --model_path /path/to/checkpoint \
         --tensor_parallel_size 4
 
-    # 3) ⚠️ Internal only — distill backend (delete before release)
-    python infer.py --api_type distill --api_name doubao-seed-1-8-251228-nonthinking
-
 Outputs:
     Opensource/infer_results/<model_tag>/results.jsonl
 """
@@ -68,7 +65,7 @@ def parse_args() -> argparse.Namespace:
         "--api_type",
         choices=API_TYPES,
         required=True,
-        help="local_vllm: 进程内 vllm.LLM; openai_compat: 标准 OpenAI 协议; distill: 内部专用",
+        help="local_vllm: 进程内 vllm.LLM; openai_compat: 标准 OpenAI 协议",
     )
 
     # OpenAI compat 参数
@@ -81,9 +78,6 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--tensor_parallel_size", type=int, default=1)
     p.add_argument("--max_model_len", type=int, default=None)
     p.add_argument("--gpu_memory_utilization", type=float, default=0.9)
-
-    # distill（内部）
-    p.add_argument("--api_name", type=str, default=None, help="distill: 内部 API 名称")
 
     # 数据 / 输出
     p.add_argument(
@@ -108,7 +102,7 @@ def parse_args() -> argparse.Namespace:
 def build_api(args: argparse.Namespace):
     if args.api_type == "openai_compat":
         if not args.model_name or not args.base_url:
-            raise SystemExit("--api_type openai_compat 需要同时提供 --model_name 与 --base_url")
+            raise ValueError("--api_type openai_compat 需要同时提供 --model_name 与 --base_url")
         return get_api(
             "openai_compat",
             model_name=args.model_name,
@@ -116,9 +110,9 @@ def build_api(args: argparse.Namespace):
             api_key=args.api_key,
             max_try=args.max_try,
         )
-    if args.api_type == "local_vllm":
+    elif args.api_type == "local_vllm":
         if not args.model_path:
-            raise SystemExit("--api_type local_vllm 需要提供 --model_path")
+            raise ValueError("--api_type local_vllm 需要提供 --model_path")
         return get_api(
             "local_vllm",
             model_path=args.model_path,
@@ -127,10 +121,8 @@ def build_api(args: argparse.Namespace):
             gpu_memory_utilization=args.gpu_memory_utilization,
             max_try=args.max_try,
         )
-    # distill
-    if not args.api_name:
-        raise SystemExit("--api_type distill 需要提供 --api_name")
-    return get_api("distill", api_name=args.api_name, max_try=args.max_try)
+    else:
+        raise ValueError(f"unsupported api_type: {args.api_type}")
 
 
 def derive_output_tag(args: argparse.Namespace) -> str:
@@ -140,8 +132,6 @@ def derive_output_tag(args: argparse.Namespace) -> str:
         return args.model_name
     if args.api_type == "local_vllm" and args.model_path:
         return Path(args.model_path).name
-    if args.api_type == "distill" and args.api_name:
-        return args.api_name
     return "default"
 
 

@@ -366,7 +366,7 @@ def analyze(input_dir: str, output_file: str, num_workers: int) -> None:
             for c in range(2, len(type_header2) + 1):
                 ws_t.column_dimensions[get_column_letter(c)].width = 12
 
-    print(f"\n✅ 已写入 {output_file}")
+    print(f"\n  已写入 {output_file}")
 
 
 def main() -> None:

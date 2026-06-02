@@ -32,7 +32,7 @@ class LocalVLLMAPI(APIBase):
         max_try: int = 1,
         **engine_kwargs,
     ):
-        from vllm import LLM, SamplingParams  # 延迟导入：openai_compat 用户可能没装 vllm
+        from vllm import LLM, SamplingParams
 
         self.model_path = model_path
         self.max_try = max_try
@@ -52,7 +52,7 @@ class LocalVLLMAPI(APIBase):
             engine_args["max_model_len"] = max_model_len
         engine_args.update(engine_kwargs)
         self.llm = LLM(**engine_args)
-        self._lock = threading.Lock()  # vLLM 自带异步引擎，但部分版本对 generate 调用串行更稳
+        self._lock = threading.Lock()
 
         self._model_name = Path(model_path).name
 
@@ -70,7 +70,6 @@ class LocalVLLMAPI(APIBase):
     def _build_inputs(self, img_path: str | None, question: str) -> dict:
         if not img_path:
             return {"prompt": question}
-        # vLLM 多模态格式：使用 ``multi_modal_data``
         image = Image.open(img_path).convert("RGB")
         prompt = f"<|im_start|>user\n<image>\n{question}<|im_end|>\n<|im_start|>assistant\n"
         return {"prompt": prompt, "multi_modal_data": {"image": image}}
