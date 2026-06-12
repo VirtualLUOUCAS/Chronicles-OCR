@@ -136,17 +136,14 @@
 ### 1. 安装
 
 ```bash
-GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/VirtualLUOUCAS/Chronicles-OCR.git
+git clone https://github.com/VirtualLUOUCAS/Chronicles-OCR.git
 cd Chronicles-OCR
 pip install -r requirements.txt
-
-# 如果你想下载仓库中的数据压缩包，请运行：
-# git lfs pull --include="Opensource_data.zip"
 ```
 
 ### 2. 下载数据
 
-下载数据并放置在 `data/` 目录下：
+从 [🤗](https://huggingface.co/datasets/VirtualLUO/Chronicles-OCR) 或 [🤖](https://modelscope.cn/datasets/VirtualLUO/Chronicles-OCR) 下载数据并放置在 `data/` 目录下：
 
 ```
 data/

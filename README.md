@@ -136,17 +136,14 @@ Among these, the first five (Oracle Bone → Regular) successively served as for
 ### 1. Setup
 
 ```bash
-GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/VirtualLUOUCAS/Chronicles-OCR.git
+git clone https://github.com/VirtualLUOUCAS/Chronicles-OCR.git
 cd Chronicles-OCR
 pip install -r requirements.txt
-
-# If you want to download data zip in the repo, run:
-# git lfs pull --include="Opensource_data.zip"
 ```
 
 ### 2. Download Data
 
-Download and place the benchmark data under `data/`:
+Download and place the benchmark data under `data/` from [🤗](https://huggingface.co/datasets/VirtualLUO/Chronicles-OCR) or [🤖](https://modelscope.cn/datasets/VirtualLUO/Chronicles-OCR):
 
 ```
 data/
