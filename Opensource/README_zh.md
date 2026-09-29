@@ -11,14 +11,14 @@
 
 | 任务                                       | 简称           | 指标                   | 说明                                             |
 | ------------------------------------------ | -------------- | ---------------------- | ------------------------------------------------ |
-| Cross-period Character Spotting            | Spotting       | F1 @ IoU > 0.75        | 检测每个字符的 bbox 并识别其对应的现代汉字       |
+| Cross-period Character Spotting            | Spotting       | F1 @ IoU ≥ 0.75        | 检测每个字符的 bbox 并识别其对应的现代汉字       |
 | Fine-grained Archaic Character Recognition | Recognition    | Exact-match Accuracy   | 识别图中红色矩形框内单个古文字符所对应的现代汉字 |
 | Ancient Text Parsing                       | Parsing        | 1 − NED（Levenshtein） | 按阅读顺序识别图中所有汉字；评分前会过滤 `[UNK]` |
 | Script Classification                      | Classification | Accuracy               | 将图像分类到七种规范书体中的其中之一             |
 
 全部评分均为 **基于规则**，**不需要 LLM 评审**。
 
-> 注：Spotting 任务内部还会同时报告一个 Detection F1（仅看 bbox、IoU > 0.75，不要求字符一致）作为诊断指标；Spotting 主指标要求 IoU 与字符同时命中。
+> 注：Spotting 任务内部还会同时报告一个 Detection F1（仅看 bbox、IoU ≥ 0.75，不要求字符一致）作为诊断指标；Spotting 主指标要求 IoU 与字符同时命中。
 
 ---
 
@@ -26,7 +26,7 @@
 
 ```bash
 git clone <this-repo>
-cd ChronoText/Opensource
+cd Chronicles-OCR/Opensource
 pip install -r requirements.txt
 # 可选：仅当使用 --api_type local_vllm 时需要
 pip install vllm

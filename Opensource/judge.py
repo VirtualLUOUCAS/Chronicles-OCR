@@ -1,4 +1,4 @@
-"""ChronoText benchmark judging entry point.
+"""Chronicles-OCR benchmark judging entry point.
 
 Rule-based scoring only — no LLM / API call needed.
 
@@ -28,8 +28,8 @@ import tqdm
 REPO_ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(REPO_ROOT.parent))
 
-from Opensource.judges import JUDGE_FUNCS  # noqa: E402
-from Opensource.utils.io import ResultWriter, get_image_path  # noqa: E402
+from Opensource.judges import JUDGE_FUNCS
+from Opensource.utils.io import ResultWriter, get_image_path
 
 DEFAULT_DATA_FILE = REPO_ROOT / "data" / "Chronicles_OCR.jsonl"
 DEFAULT_INFER_DIR = REPO_ROOT / "infer_results"
@@ -40,7 +40,7 @@ ALL_TASKS = ["字体分类", "字符提取", "字符检测", "单字识别"]
 
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="ChronoText rule-based judging")
+    p = argparse.ArgumentParser(description="Chronicles-OCR rule-based judging")
     p.add_argument("--data_file", type=str, default=str(DEFAULT_DATA_FILE), help="benchmark jsonl 路径")
     p.add_argument("--infer_dir", type=str, default=str(DEFAULT_INFER_DIR), help="infer_results 目录")
     p.add_argument("--output_dir", type=str, default=str(DEFAULT_JUDGE_DIR), help="judge_results 目录")
@@ -96,7 +96,7 @@ def judge_one_row(infer_row: dict, gt_row: dict) -> dict:
             judge_results[task] = {"score": score}
         except Exception as e:
             print(f"  任务 '{task}' 评分异常: {e}")
-            judge_results[task] = {"score": 0.0, "error": str(e)}
+            judge_results[task] = {"score": {"score": 0.0}, "error": str(e)}
 
     out = dict(infer_row)
     out["judge_results"] = judge_results
@@ -172,7 +172,7 @@ def main() -> None:
         raise SystemExit(f"infer 目录不存在: {infer_dir}")
 
     print("=" * 72)
-    print("ChronoText Judging")
+    print("Chronicles-OCR Judging")
     print("=" * 72)
     print(f"data_file  : {data_file}")
     print(f"infer_dir  : {infer_dir}")

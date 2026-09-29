@@ -22,13 +22,19 @@ DEFAULT_TIMEOUT = 1200
 
 
 def _split_think_answer(response: str) -> tuple[str, str]:
-    """从模型输出中拆出 thinking / final answer。"""
+    """从模型输出中拆出 thinking / final answer，兼容有无 <answer> 包裹的两种写法。"""
     if not response or not response.strip():
         return "", ""
-    m = re.search(r"<think>\n(.*?)\n</think>\n<answer>\n(.*?)\n</answer>", response, flags=re.DOTALL)
-    if m:
-        return m.group(1).strip(), m.group(2).strip()
-    return "", response.strip()
+    m = re.search(
+        r"<\s*(?:think|thinking|reasoning)\s*>(.*?)<\s*/\s*(?:think|thinking|reasoning)\s*>(.*)",
+        response,
+        flags=re.DOTALL | re.IGNORECASE,
+    )
+    if not m:
+        return "", response.strip()
+    thinking, tail = m.group(1).strip(), m.group(2).strip()
+    ans = re.search(r"<\s*answer\s*>(.*?)<\s*/\s*answer\s*>", tail, flags=re.DOTALL | re.IGNORECASE)
+    return thinking, (ans.group(1).strip() if ans else tail)
 
 
 class OpenAICompatAPI(APIBase):
@@ -74,8 +80,11 @@ class OpenAICompatAPI(APIBase):
                     temperature=temperature,
                     timeout=self.timeout,
                 )
-                response = completion.choices[0].message.content or ""
-                thinking, answer = _split_think_answer(response)
+                message = completion.choices[0].message
+                thinking, answer = _split_think_answer(message.content or "")
+                # 部分网关把 think 段单独放在 reasoning_content 里
+                if not thinking:
+                    thinking = getattr(message, "reasoning_content", "") or ""
                 return True, thinking, answer
             except Exception as e:
                 print(f"[OpenAICompatAPI] 尝试 {attempt}/{self.max_try} 失败: {e}")

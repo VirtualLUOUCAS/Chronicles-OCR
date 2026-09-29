@@ -17,10 +17,10 @@ import re
 import tempfile
 import threading
 from pathlib import Path
-from typing import Optional
 
 from PIL import Image, ImageDraw
 
+from ..utils.bbox import bbox_to_xyxy, item_char
 from ..utils.unk import is_unk_char
 from ._text import clean_value, extract_by_prefix, strip_thinking
 
@@ -76,54 +76,6 @@ MAX_BOX_WIDTH = 12
 BOX_WIDTH_RATIO = 0.006  # 0.6% of min(W,H)
 
 
-def _bbox_to_xyxy(item: dict) -> Optional[tuple[float, float, float, float]]:
-    """规范化 spotting item 的 bbox 为像素坐标 (x1,y1,x2,y2)。
-
-    支持：
-      - {"bbox":[x,y,w,h], "modern_char": ...}（甲骨文）
-      - {"bbox":{"x1","y1","x2","y2"}, "text": ...}（金文/篆文）
-      - {"bbox":[x1,y1,x2,y2], "text": ...}（备用格式）
-    """
-    bbox = item.get("bbox")
-    if bbox is None:
-        return None
-
-    if isinstance(bbox, dict):
-        try:
-            x1 = float(bbox.get("x1"))
-            y1 = float(bbox.get("y1"))
-            x2 = float(bbox.get("x2"))
-            y2 = float(bbox.get("y2"))
-        except (TypeError, ValueError):
-            return None
-        return (x1, y1, x2, y2) if (x2 > x1 and y2 > y1) else None
-
-    if isinstance(bbox, (list, tuple)) and len(bbox) == 4:
-        try:
-            bx = [float(v) for v in bbox]
-        except (TypeError, ValueError):
-            return None
-        if "modern_char" in item:
-            x, y, w, h = bx
-            x1, y1, x2, y2 = x, y, x + w, y + h
-        else:
-            if bx[2] < bx[0] or bx[3] < bx[1]:
-                x, y, w, h = bx
-                x1, y1, x2, y2 = x, y, x + w, y + h
-            else:
-                x1, y1, x2, y2 = bx
-        return (x1, y1, x2, y2) if (x2 > x1 and y2 > y1) else None
-
-    return None
-
-
-def _item_char(item: dict) -> str:
-    ch = item.get("modern_char")
-    if ch is None:
-        ch = item.get("text", "")
-    return str(ch or "").strip()
-
-
 def _build_sample_key(row: dict) -> str:
     parts: list[str] = []
     for k in ("image_path", "img_path", "image"):
@@ -142,7 +94,7 @@ def _seeded_rng(key: str, seed: int) -> random.Random:
     return random.Random(int(h[:16], 16))
 
 
-def _pick_target(row: dict, seed: int) -> Optional[dict]:
+def _pick_target(row: dict, seed: int) -> dict | None:
     sp = row.get("spotting") or []
     if not isinstance(sp, list) or not sp:
         return None
@@ -151,10 +103,10 @@ def _pick_target(row: dict, seed: int) -> Optional[dict]:
     for idx, it in enumerate(sp):
         if not isinstance(it, dict):
             continue
-        ch = _item_char(it)
+        ch = item_char(it)
         if is_unk_char(ch):
             continue
-        bb = _bbox_to_xyxy(it)
+        bb = bbox_to_xyxy(it)
         if bb is None:
             continue
         candidates.append((idx, ch, bb))
@@ -173,7 +125,7 @@ def _box_width(W: int, H: int) -> int:
     return max(MIN_BOX_WIDTH, min(MAX_BOX_WIDTH, w))
 
 
-def _draw_box(img_path: str, bbox_xyxy, out_dir: Optional[str]) -> str:
+def _draw_box(img_path: str, bbox_xyxy, out_dir: str | None) -> str:
     with Image.open(img_path) as im:
         im = im.convert("RGB")
         W, H = im.size
@@ -184,13 +136,15 @@ def _draw_box(img_path: str, bbox_xyxy, out_dir: Optional[str]) -> str:
         ImageDraw.Draw(im).rectangle([x1, y1, x2, y2], outline=RED_BOX_COLOR, width=bw)
 
         if out_dir is None:
-            out_dir = os.path.join(tempfile.gettempdir(), "chronotext_referring")
+            out_dir = os.path.join(tempfile.gettempdir(), "chronicles_ocr_referring")
         os.makedirs(out_dir, exist_ok=True)
         stem = Path(img_path).stem
         tag = hashlib.md5(f"{img_path}|{x1:.2f},{y1:.2f},{x2:.2f},{y2:.2f}".encode("utf-8")).hexdigest()[:8]
-        out_path = os.path.join(out_dir, f"{stem}_redbox_{tag}_{os.getpid()}_{threading.get_ident()}.png")
+        out_path = os.path.join(out_dir, f"{stem}_redbox_{tag}.png")
+        if os.path.exists(out_path):
+            return out_path
 
-        tmp = f"{out_path}.tmp"
+        tmp = f"{out_path}.{os.getpid()}.{threading.get_ident()}.tmp"
         im.save(tmp, format="PNG")
         os.replace(tmp, out_path)
         return out_path
@@ -200,8 +154,8 @@ def prepare_referring_sample(
     row: dict,
     img_path: str,
     seed: int = DEFAULT_SEED,
-    out_dir: Optional[str] = None,
-) -> Optional[dict]:
+    out_dir: str | None = None,
+) -> dict | None:
     """采样 + 画框 + 落盘。任一步失败返回 None。"""
     picked = _pick_target(row, seed=seed)
     if picked is None:
@@ -210,8 +164,6 @@ def prepare_referring_sample(
         return None
 
     rendered = _draw_box(img_path, picked["bbox_xyxy"], out_dir)
-    if not (rendered and os.path.exists(rendered)):
-        rendered = _draw_box(img_path, picked["bbox_xyxy"], out_dir)
     return {
         "rendered_img_path": rendered,
         "target_char": picked["char"],

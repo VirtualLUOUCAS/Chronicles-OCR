@@ -11,14 +11,14 @@ The four tasks:
 
 | Task                                       | Short Name     | Metric                | Description                                                                |
 | ------------------------------------------ | -------------- | --------------------- | -------------------------------------------------------------------------- |
-| Cross-period Character Spotting            | Spotting       | F1 @ IoU > 0.75       | Detect bounding boxes and identify the modern character for each box       |
+| Cross-period Character Spotting            | Spotting       | F1 @ IoU ≥ 0.75       | Detect bounding boxes and identify the modern character for each box       |
 | Fine-grained Archaic Character Recognition | Recognition    | Exact-match Accuracy  | Identify the modern character inside a red bounding box drawn on the image |
 | Ancient Text Parsing                       | Parsing        | 1 − NED (Levenshtein) | Read all characters in reading order; `[UNK]` is filtered before scoring   |
 | Script Classification                      | Classification | Accuracy              | Classify the image into one of the seven canonical scripts                 |
 
 All scoring is **rule-based** — no LLM judge is needed.
 
-> Note: the Spotting task internally also reports a Detection F1 (bbox-only, IoU > 0.75 without character matching) as a diagnostic; the headline Spotting score requires both IoU and character match.
+> Note: the Spotting task internally also reports a Detection F1 (bbox-only, IoU ≥ 0.75 without character matching) as a diagnostic; the headline Spotting score requires both IoU and character match.
 
 ---
 
@@ -26,7 +26,7 @@ All scoring is **rule-based** — no LLM judge is needed.
 
 ```bash
 git clone <this-repo>
-cd ChronoText/Opensource
+cd Chronicles-OCR/Opensource
 pip install -r requirements.txt
 # Optional: only if you plan to use --api_type local_vllm
 pip install vllm

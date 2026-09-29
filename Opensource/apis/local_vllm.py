@@ -1,12 +1,11 @@
 """本地 vLLM 进程内推理：``from vllm import LLM`` 加载一个本地模型路径。
 
-适用场景：用户提供一个本地权重路径（``--api_type local_vllm --model_path ...``），
+适用场景：用户提供一个本地权重路径，即 ``--api_type local_vllm --model_path ...``。
 """
 
 from __future__ import annotations
 
 import threading
-from pathlib import Path
 
 from PIL import Image
 
@@ -53,8 +52,6 @@ class LocalVLLMAPI(APIBase):
         engine_args.update(engine_kwargs)
         self.llm = LLM(**engine_args)
         self._lock = threading.Lock()
-
-        self._model_name = Path(model_path).name
 
     def __call__(self, img_path: str | None, question: str, **kwargs):
         try:

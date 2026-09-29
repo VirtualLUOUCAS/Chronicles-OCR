@@ -1,4 +1,4 @@
-"""ChronoText benchmark inference entry point.
+"""Chronicles-OCR benchmark inference entry point.
 
 Usage:
     # 1) Local OpenAI-compatible service started by ``vllm serve`` / sglang / lmdeploy
@@ -58,7 +58,7 @@ ALL_TASKS = [TASK_CLASSIFY, TASK_EXTRACT, TASK_SPOTTING, TASK_REFERRING]
 
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="ChronoText inference entry point")
+    p = argparse.ArgumentParser(description="Chronicles-OCR inference entry point")
 
     # API 选择
     p.add_argument(
@@ -190,13 +190,13 @@ def process_one_row(
                 }
                 continue
             task_img = sample["rendered_img_path"]
+            # 随 rec 一起落盘的元信息
             referring_meta = {
                 "gt_char": sample["target_char"],
                 "target_bbox_xyxy": sample["target_bbox_xyxy"],
                 "target_index": sample["index"],
                 "sample_key": sample["sample_key"],
                 "seed": seed,
-                "rendered_img_path": sample["rendered_img_path"],
             }
 
         last_error = None
@@ -229,12 +229,7 @@ def process_one_row(
                 if extract_ok:
                     rec["extract"] = extracted
                 if referring_meta is not None:
-                    rec.update(
-                        {
-                            k: referring_meta[k]
-                            for k in ("gt_char", "target_bbox_xyxy", "target_index", "sample_key", "seed")
-                        }
-                    )
+                    rec.update(referring_meta)
                 infer_results[task_name] = rec
                 break
             except Exception as e:
@@ -245,12 +240,7 @@ def process_one_row(
                 else:
                     rec = {"thinking": "", "answer": "", "error": last_error}
                     if referring_meta is not None:
-                        rec.update(
-                            {
-                                k: referring_meta[k]
-                                for k in ("gt_char", "target_bbox_xyxy", "target_index", "sample_key", "seed")
-                            }
-                        )
+                        rec.update(referring_meta)
                     infer_results[task_name] = rec
 
     result = dict(row)
@@ -274,7 +264,7 @@ def main() -> None:
     referring_cache_dir = str(output_dir / ".referring_cache")
 
     print("=" * 72)
-    print("ChronoText Inference")
+    print("Chronicles-OCR Inference")
     print("=" * 72)
     print(f"api_type     : {args.api_type}")
     print(f"output_tag   : {output_tag}")
@@ -305,7 +295,7 @@ def main() -> None:
 
     # 历史结果（增量）
     all_task_set = set(ALL_TASKS)
-    processed, _needs = read_processed(str(output_file), all_task_set)
+    processed, _ = read_processed(str(output_file), all_task_set)
     print(f"历史结果: 已写入 {len(processed)} 条")
 
     # 待处理列表

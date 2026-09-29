@@ -1,4 +1,4 @@
-"""ChronoText benchmark scoring summary.
+"""Chronicles-OCR benchmark scoring summary.
 
 Aggregates rule-based judging results from ``judge_results/<model>/results.jsonl``
 into a multi-sheet Excel workbook with per-model x per-task / per-font-type breakdowns.
@@ -147,7 +147,7 @@ def get_group_tasks(group: str) -> list[str]:
 
 def analyze(input_dir: str, output_file: str, num_workers: int) -> None:
     print("=" * 72)
-    print("ChronoText Summarize")
+    print("Chronicles-OCR Summarize")
     print("=" * 72)
     print(f"input_dir   : {input_dir}")
     print(f"output_file : {output_file}")
@@ -370,7 +370,7 @@ def analyze(input_dir: str, output_file: str, num_workers: int) -> None:
 
 
 def main() -> None:
-    p = argparse.ArgumentParser(description="ChronoText scoring summary")
+    p = argparse.ArgumentParser(description="Chronicles-OCR scoring summary")
     p.add_argument("--input_dir", type=str, default=str(DEFAULT_INPUT_DIR))
     p.add_argument("--output", type=str, default=str(DEFAULT_OUTPUT_FILE))
     p.add_argument("--num_workers", type=int, default=32)

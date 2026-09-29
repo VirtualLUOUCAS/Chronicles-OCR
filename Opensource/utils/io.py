@@ -85,9 +85,7 @@ class ResultWriter:
             with open(self.tmp_file, "w", encoding="utf-8") as f:
                 for data in self.processed.values():
                     f.write(json.dumps(data, ensure_ascii=False) + "\n")
-            if os.path.exists(self.output_file):
-                os.remove(self.output_file)
-            os.rename(self.tmp_file, self.output_file)
+            os.replace(self.tmp_file, self.output_file)
         except Exception as e:
             print(f"保存到磁盘时出错: {e}")
             traceback.print_exc()

@@ -1,12 +1,13 @@
 """字符检测（Detection / End-to-End Spotting）打分。
 
-  - Detection：仅看 bbox，IoU > 0.75 视为 TP，包含 [UNK]
-  - Spotting：IoU > 0.75 且字符匹配视为 TP，排除 [UNK]
+  - Detection：仅看 bbox，IoU >= 0.75 视为 TP，包含 [UNK]
+  - Spotting：IoU >= 0.75 且字符匹配视为 TP，排除 [UNK]
 均输出 per-sample F1。GT bbox 像素单位会被归一化到 0-1000 与模型输出对齐。
 """
 
 from __future__ import annotations
 
+from ..utils.bbox import bbox_to_xyxy, item_char
 from ..utils.unk import is_unk_char
 
 IOU_THRESH = 0.75
@@ -29,45 +30,15 @@ def _iou(a, b) -> float:
 
 def _parse_gt(row: dict) -> tuple[list[dict], int, int]:
     """解析 GT spotting，返回 [{'bbox':[x1,y1,x2,y2],'char':str}, ...] + 图像 W/H。"""
-    sp = row.get("spotting") or []
-    W = int(row.get("width") or 0)
-    H = int(row.get("height") or 0)
     items: list[dict] = []
-    for it in sp:
+    for it in row.get("spotting") or []:
         if not isinstance(it, dict):
             continue
-        ch = it.get("modern_char")
-        if ch is None:
-            ch = it.get("text", "")
-        ch = str(ch or "").strip()
-
-        bbox = it.get("bbox")
-        if bbox is None:
+        bb = bbox_to_xyxy(it)
+        if bb is None:
             continue
-        x1 = y1 = x2 = y2 = None
-        if isinstance(bbox, dict):
-            try:
-                x1, y1, x2, y2 = (float(bbox[k]) for k in ("x1", "y1", "x2", "y2"))
-            except (KeyError, TypeError, ValueError):
-                continue
-        elif isinstance(bbox, (list, tuple)) and len(bbox) == 4:
-            try:
-                bx = [float(v) for v in bbox]
-            except (TypeError, ValueError):
-                continue
-            if bx[2] < bx[0] or bx[3] < bx[1]:
-                x1, y1, x2, y2 = bx[0], bx[1], bx[0] + bx[2], bx[1] + bx[3]
-            else:
-                if "modern_char" in it:
-                    x1, y1, x2, y2 = bx[0], bx[1], bx[0] + bx[2], bx[1] + bx[3]
-                else:
-                    x1, y1, x2, y2 = bx
-        else:
-            continue
-        if x2 <= x1 or y2 <= y1:
-            continue
-        items.append({"bbox": [float(x1), float(y1), float(x2), float(y2)], "char": ch})
-    return items, W, H
+        items.append({"bbox": [float(v) for v in bb], "char": item_char(it)})
+    return items, int(row.get("width") or 0), int(row.get("height") or 0)
 
 
 def _scale_to_1000(items: list[dict], W: int, H: int) -> list[dict]:

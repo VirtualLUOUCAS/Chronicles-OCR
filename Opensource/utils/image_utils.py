@@ -12,21 +12,6 @@ from PIL import Image
 
 MAX_IMAGE_SIZE = 8 * 1024 * 1024  # 8MB，超过则压缩
 
-try:
-    import imghdr
-
-    def _detect_format(image_bytes: bytes) -> str | None:
-        return imghdr.what(None, image_bytes)
-except ImportError:
-
-    def _detect_format(image_bytes: bytes) -> str | None:
-        try:
-            with Image.open(BytesIO(image_bytes)) as img:
-                return (img.format or "").lower() or None
-        except Exception:
-            return None
-
-
 def _compress(image_bytes: bytes, max_size: int = MAX_IMAGE_SIZE) -> tuple[bytes, str]:
     with Image.open(BytesIO(image_bytes)) as img:
         if img.mode in ("RGBA", "P"):
@@ -59,12 +44,11 @@ def encode_image(image_path: str) -> str:
     with open(image_path, "rb") as f:
         image_bytes = f.read()
 
-    fmt = None
     try:
         with Image.open(BytesIO(image_bytes)) as img:
             fmt = (img.format or "").lower() or None
-    except Exception:
-        fmt = _detect_format(image_bytes)
+    except Exception as e:
+        raise ValueError(f"无法识别图像格式: {image_path}") from e
     if not fmt:
         raise ValueError(f"无法识别图像格式: {image_path}")
 

@@ -2,7 +2,7 @@
 
   score = 1 - Levenshtein(pred, gt) / max(|pred|, |gt|)
 
-双边都先做 ``normalize_for_parsing``（去空白 / 换行 / 标点），再剔除 ``[UNK]`` 占位。
+双边都先剔除 ``[UNK]`` 占位，再做 ``normalize_for_parsing``（去空白 / 换行 / 标点）。
 """
 
 from __future__ import annotations
@@ -40,10 +40,8 @@ def _levenshtein(s1: str, s2: str) -> int:
 
 
 def judge(extract: dict, row: dict) -> dict:
-    gt_raw = normalize_for_parsing(row.get("annotation", "") or "")
-    pred_raw = normalize_for_parsing((extract or {}).get("extracted_text", "") or "")
-    gt = remove_unk(gt_raw)
-    pred = remove_unk(pred_raw)
+    gt = normalize_for_parsing(remove_unk(row.get("annotation", "") or ""))
+    pred = normalize_for_parsing(remove_unk((extract or {}).get("extracted_text", "") or ""))
 
     len_gt, len_pred = len(gt), len(pred)
     if len_gt == 0 and len_pred == 0:
