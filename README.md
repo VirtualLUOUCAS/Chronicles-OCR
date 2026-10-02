@@ -96,7 +96,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
   <tbody>
     <tr><td colspan="19" align="left"><em><strong>Open-Source Models</strong></em></td></tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/intern.png" width="14" height="14" alt="InternVL"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/intern.png" width="14" height="14" alt="InternVL"></td>
       <td align="left"><sub>InternVL3.5&#8209;8B</sub></td>
       <td align="center"></td>
       <td align="center">0.1</td>
@@ -117,7 +117,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">77.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/intern.png" width="14" height="14" alt="InternVL"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/intern.png" width="14" height="14" alt="InternVL"></td>
       <td align="left"><sub>InternVL3.5&#8209;A28B</sub></td>
       <td align="center"></td>
       <td align="center">0.5</td>
@@ -138,7 +138,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">61.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen2.5&#8209;VL&#8209;7B</sub></td>
       <td align="center"></td>
       <td align="center">0.0</td>
@@ -159,7 +159,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">99.2</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen2.5&#8209;VL&#8209;72B</sub></td>
       <td align="center"></td>
       <td align="center">0.0</td>
@@ -180,7 +180,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">98.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen3&#8209;VL&#8209;2B</sub></td>
       <td align="center"></td>
       <td align="center">2.1</td>
@@ -201,7 +201,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">85.8</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen3&#8209;VL&#8209;8B</sub></td>
       <td align="center"></td>
       <td align="center">3.4</td>
@@ -222,7 +222,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">98.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen3&#8209;VL&#8209;8B</sub></td>
       <td align="center">✓</td>
       <td align="center">1.0</td>
@@ -243,7 +243,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">72.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen3&#8209;VL&#8209;A22B</sub></td>
       <td align="center"></td>
       <td align="center">7.8</td>
@@ -264,7 +264,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">96.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen3&#8209;VL&#8209;A22B</sub></td>
       <td align="center">✓</td>
       <td align="center">2.1</td>
@@ -285,7 +285,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">97.2</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen3.5&#8209;A3B</sub></td>
       <td align="center"></td>
       <td align="center">5.6</td>
@@ -306,7 +306,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center"><strong>99.8</strong></td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen3.5&#8209;A17B</sub></td>
       <td align="center"></td>
       <td align="center">9.7</td>
@@ -327,7 +327,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">98.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/gemma.png" width="14" height="14" alt="Gemma"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/gemma.png" width="14" height="14" alt="Gemma"></td>
       <td align="left"><sub>Gemma&nbsp;4&nbsp;31B&nbsp;it</sub></td>
       <td align="center"></td>
       <td align="center">2.3</td>
@@ -348,7 +348,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">62.7</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/minicpm.png" width="14" height="14" alt="MiniCPM"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/minicpm.png" width="14" height="14" alt="MiniCPM"></td>
       <td align="left"><sub>MiniCPM&#8209;V&nbsp;4.5</sub></td>
       <td align="center">✓</td>
       <td align="center">0.0</td>
@@ -369,7 +369,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">82.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/AllenAI.png" width="14" height="14" alt="AllenAI"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/AllenAI.png" width="14" height="14" alt="AllenAI"></td>
       <td align="left"><sub>Molmo&nbsp;7B&#8209;D&nbsp;0924</sub></td>
       <td align="center"></td>
       <td align="center">0.0</td>
@@ -390,7 +390,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">20.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/AllenAI.png" width="14" height="14" alt="AllenAI"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/AllenAI.png" width="14" height="14" alt="AllenAI"></td>
       <td align="left"><sub>Molmo&nbsp;72B&nbsp;0924</sub></td>
       <td align="center"></td>
       <td align="center">0.0</td>
@@ -411,7 +411,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">82.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/alibaba.png" width="14" height="14" alt="Alibaba"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/alibaba.png" width="14" height="14" alt="Alibaba"></td>
       <td align="left"><sub>Ovis2.6&#8209;30B&#8209;A3B</sub></td>
       <td align="center">✓</td>
       <td align="center">2.5</td>
@@ -432,7 +432,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">79.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/glmv.png" width="14" height="14" alt="GLM"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/glmv.png" width="14" height="14" alt="GLM"></td>
       <td align="left"><sub>GLM&#8209;4.5V&nbsp;108B</sub></td>
       <td align="center">✓</td>
       <td align="center">1.8</td>
@@ -453,7 +453,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">91.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/kimi.png" width="14" height="14" alt="Kimi"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/kimi.png" width="14" height="14" alt="Kimi"></td>
       <td align="left"><sub>Kimi&nbsp;K2.5</sub></td>
       <td align="center"></td>
       <td align="center">6.6</td>
@@ -474,7 +474,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">95.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/kimi.png" width="14" height="14" alt="Kimi"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/kimi.png" width="14" height="14" alt="Kimi"></td>
       <td align="left"><sub>Kimi&nbsp;K2.5</sub></td>
       <td align="center">✓</td>
       <td align="center">2.4</td>
@@ -496,7 +496,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
     </tr>
     <tr><td colspan="19" align="left"><em><strong>Proprietary Models</strong></em></td></tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/openai.png" width="14" height="14" alt="OpenAI"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/openai.png" width="14" height="14" alt="OpenAI"></td>
       <td align="left"><sub>GPT&#8209;4o</sub></td>
       <td align="center"></td>
       <td align="center">0.1</td>
@@ -517,7 +517,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">89.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/openai.png" width="14" height="14" alt="OpenAI"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/openai.png" width="14" height="14" alt="OpenAI"></td>
       <td align="left"><sub>GPT&#8209;5</sub></td>
       <td align="center"></td>
       <td align="center">0.5</td>
@@ -538,7 +538,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">97.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
       <td align="left"><sub>Seed&nbsp;1.8</sub></td>
       <td align="center"></td>
       <td align="center">11.9</td>
@@ -559,7 +559,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">99.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
       <td align="left"><sub>Seed&nbsp;1.8</sub></td>
       <td align="center">✓</td>
       <td align="center">9.8</td>
@@ -580,7 +580,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">97.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
       <td align="left"><sub>Seed&nbsp;2.0&nbsp;Pro</sub></td>
       <td align="center"></td>
       <td align="center"><strong>21.1 🏆</strong></td>
@@ -601,7 +601,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">93.8</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
       <td align="left"><sub>Seed&nbsp;2.0&nbsp;Pro</sub></td>
       <td align="center">✓</td>
       <td align="center">19.8</td>
@@ -622,7 +622,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">94.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/xiaomimimo.png" width="14" height="14" alt="Xiaomi"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/xiaomimimo.png" width="14" height="14" alt="Xiaomi"></td>
       <td align="left"><sub>MiMo&#8209;V2&#8209;Omni</sub></td>
       <td align="center">✓</td>
       <td align="center">0.6</td>
@@ -643,7 +643,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">93.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/gemini.png" width="14" height="14" alt="Gemini"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/gemini.png" width="14" height="14" alt="Gemini"></td>
       <td align="left"><sub>Gemini&nbsp;2.5&nbsp;Pro</sub></td>
       <td align="center">✓</td>
       <td align="center">1.0</td>
@@ -664,7 +664,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">70.2</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/gemini.png" width="14" height="14" alt="Gemini"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/gemini.png" width="14" height="14" alt="Gemini"></td>
       <td align="left"><sub>Gemini&nbsp;3.1&nbsp;Pro</sub></td>
       <td align="center">✓</td>
       <td align="center">3.4</td>
@@ -685,7 +685,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">93.2</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/claude.png" width="14" height="14" alt="Claude"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/claude.png" width="14" height="14" alt="Claude"></td>
       <td align="left"><sub>Claude&nbsp;Opus&nbsp;4.7</sub></td>
       <td align="center">✓</td>
       <td align="center">0.5</td>
@@ -739,7 +739,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
   <tbody>
     <tr><td colspan="13" align="left"><em><strong>Open-Source Models</strong></em></td></tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/intern.png" width="14" height="14" alt="InternVL"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/intern.png" width="14" height="14" alt="InternVL"></td>
       <td align="left"><sub>InternVL3.5&#8209;8B</sub></td>
       <td align="center"></td>
       <td align="center">0.40</td>
@@ -754,7 +754,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">35.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/intern.png" width="14" height="14" alt="InternVL"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/intern.png" width="14" height="14" alt="InternVL"></td>
       <td align="left"><sub>InternVL3.5&#8209;A28B</sub></td>
       <td align="center"></td>
       <td align="center">0.56</td>
@@ -769,7 +769,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">75.2</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen2.5&#8209;VL&#8209;7B</sub></td>
       <td align="center"></td>
       <td align="center">0.45</td>
@@ -784,7 +784,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">90.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen2.5&#8209;VL&#8209;72B</sub></td>
       <td align="center"></td>
       <td align="center">0.49</td>
@@ -799,7 +799,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">86.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen3&#8209;VL&#8209;2B</sub></td>
       <td align="center"></td>
       <td align="center">0.56</td>
@@ -814,7 +814,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">93.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen3&#8209;VL&#8209;8B</sub></td>
       <td align="center"></td>
       <td align="center">0.66</td>
@@ -829,7 +829,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">81.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen3&#8209;VL&#8209;8B</sub></td>
       <td align="center">✓</td>
       <td align="center">0.50</td>
@@ -844,7 +844,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">56.2</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen3&#8209;VL&#8209;A22B</sub></td>
       <td align="center"></td>
       <td align="center">0.67</td>
@@ -859,7 +859,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">82.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen3&#8209;VL&#8209;A22B</sub></td>
       <td align="center">✓</td>
       <td align="center">0.65</td>
@@ -874,7 +874,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">78.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen3.5&#8209;A3B</sub></td>
       <td align="center"></td>
       <td align="center">0.71</td>
@@ -889,7 +889,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">84.2</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/qwen.png" width="14" height="14" alt="Qwen"></td>
       <td align="left"><sub>Qwen3.5&#8209;A17B</sub></td>
       <td align="center"></td>
       <td align="center"><strong>0.74 🏆</strong></td>
@@ -904,7 +904,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">89.4</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/gemma.png" width="14" height="14" alt="Gemma"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/gemma.png" width="14" height="14" alt="Gemma"></td>
       <td align="left"><sub>Gemma&nbsp;4&nbsp;31B&nbsp;it</sub></td>
       <td align="center"></td>
       <td align="center">0.34</td>
@@ -919,7 +919,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">84.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/minicpm.png" width="14" height="14" alt="MiniCPM"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/minicpm.png" width="14" height="14" alt="MiniCPM"></td>
       <td align="left"><sub>MiniCPM&#8209;V&nbsp;4.5</sub></td>
       <td align="center">✓</td>
       <td align="center">0.40</td>
@@ -934,7 +934,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">48.8</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/AllenAI.png" width="14" height="14" alt="AllenAI"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/AllenAI.png" width="14" height="14" alt="AllenAI"></td>
       <td align="left"><sub>Molmo&nbsp;7B&#8209;D&nbsp;0924</sub></td>
       <td align="center"></td>
       <td align="center">0.01</td>
@@ -949,7 +949,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">0.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/AllenAI.png" width="14" height="14" alt="AllenAI"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/AllenAI.png" width="14" height="14" alt="AllenAI"></td>
       <td align="left"><sub>Molmo&nbsp;72B&nbsp;0924</sub></td>
       <td align="center"></td>
       <td align="center">0.00</td>
@@ -964,7 +964,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">12.8</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/alibaba.png" width="14" height="14" alt="Alibaba"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/alibaba.png" width="14" height="14" alt="Alibaba"></td>
       <td align="left"><sub>Ovis2.6&#8209;30B&#8209;A3B</sub></td>
       <td align="center">✓</td>
       <td align="center">0.54</td>
@@ -979,7 +979,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">12.2</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/glmv.png" width="14" height="14" alt="GLM"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/glmv.png" width="14" height="14" alt="GLM"></td>
       <td align="left"><sub>GLM&#8209;4.5V&nbsp;108B</sub></td>
       <td align="center">✓</td>
       <td align="center">0.43</td>
@@ -994,7 +994,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">81.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/kimi.png" width="14" height="14" alt="Kimi"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/kimi.png" width="14" height="14" alt="Kimi"></td>
       <td align="left"><sub>Kimi&nbsp;K2.5</sub></td>
       <td align="center"></td>
       <td align="center">0.72</td>
@@ -1009,7 +1009,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">86.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/kimi.png" width="14" height="14" alt="Kimi"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/kimi.png" width="14" height="14" alt="Kimi"></td>
       <td align="left"><sub>Kimi&nbsp;K2.5</sub></td>
       <td align="center">✓</td>
       <td align="center">0.70</td>
@@ -1025,7 +1025,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
     </tr>
     <tr><td colspan="13" align="left"><em><strong>Proprietary Models</strong></em></td></tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/openai.png" width="14" height="14" alt="OpenAI"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/openai.png" width="14" height="14" alt="OpenAI"></td>
       <td align="left"><sub>GPT&#8209;4o</sub></td>
       <td align="center"></td>
       <td align="center">0.29</td>
@@ -1040,7 +1040,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">80.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/openai.png" width="14" height="14" alt="OpenAI"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/openai.png" width="14" height="14" alt="OpenAI"></td>
       <td align="left"><sub>GPT&#8209;5</sub></td>
       <td align="center"></td>
       <td align="center">0.37</td>
@@ -1055,7 +1055,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">71.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
       <td align="left"><sub>Seed&nbsp;1.8</sub></td>
       <td align="center"></td>
       <td align="center">0.69</td>
@@ -1070,7 +1070,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">82.5</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
       <td align="left"><sub>Seed&nbsp;1.8</sub></td>
       <td align="center">✓</td>
       <td align="center">0.66</td>
@@ -1085,7 +1085,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">80.8</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
       <td align="left"><sub>Seed&nbsp;2.0&nbsp;Pro</sub></td>
       <td align="center"></td>
       <td align="center">0.72</td>
@@ -1100,7 +1100,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">92.2</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/bytedance.png" width="14" height="14" alt="ByteDance"></td>
       <td align="left"><sub>Seed&nbsp;2.0&nbsp;Pro</sub></td>
       <td align="center">✓</td>
       <td align="center">0.72</td>
@@ -1115,7 +1115,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">89.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/xiaomimimo.png" width="14" height="14" alt="Xiaomi"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/xiaomimimo.png" width="14" height="14" alt="Xiaomi"></td>
       <td align="left"><sub>MiMo&#8209;V2&#8209;Omni</sub></td>
       <td align="center">✓</td>
       <td align="center">0.56</td>
@@ -1130,7 +1130,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">64.2</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/gemini.png" width="14" height="14" alt="Gemini"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/gemini.png" width="14" height="14" alt="Gemini"></td>
       <td align="left"><sub>Gemini&nbsp;2.5&nbsp;Pro</sub></td>
       <td align="center">✓</td>
       <td align="center">0.53</td>
@@ -1145,7 +1145,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center">95.0</td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/gemini.png" width="14" height="14" alt="Gemini"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/gemini.png" width="14" height="14" alt="Gemini"></td>
       <td align="left"><sub>Gemini&nbsp;3.1&nbsp;Pro</sub></td>
       <td align="center">✓</td>
       <td align="center">0.70</td>
@@ -1160,7 +1160,7 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
       <td align="center"><strong>95.8</strong></td>
     </tr>
     <tr>
-      <td align="center"><img src="assets/model_logos/claude.png" width="14" height="14" alt="Claude"></td>
+      <td align="center"><img src="/VirtualLUOUCAS/Chronicles-OCR-private-preview/raw/main/assets/model_logos/claude.png" width="14" height="14" alt="Claude"></td>
       <td align="left"><sub>Claude&nbsp;Opus&nbsp;4.7</sub></td>
       <td align="center">✓</td>
       <td align="center">0.49</td>
