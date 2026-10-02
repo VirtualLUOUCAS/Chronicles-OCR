@@ -64,6 +64,13 @@ Chronicles-OCR 维护两个互补的多任务排行榜。古文字榜包含 Spot
 
 ### 古文字排行榜
 
+<p align="center">
+  <img src="assets/leaderboard_archaic.svg" width="100%" alt="古文字书体排行榜">
+</p>
+
+<details>
+<summary><strong>查看各书体详细结果</strong></summary>
+
 <table>
   <thead>
     <tr>
@@ -679,9 +686,18 @@ Chronicles-OCR 维护两个互补的多任务排行榜。古文字榜包含 Spot
   </tbody>
 </table>
 
+</details>
+
 > **甲** = 甲骨文, **金** = 金文, **篆** = 篆书。**加粗** = 最佳。
 
 ### 成熟书体排行榜
+
+<p align="center">
+  <img src="assets/leaderboard_mature.svg" width="100%" alt="成熟书体排行榜">
+</p>
+
+<details>
+<summary><strong>查看各书体详细结果</strong></summary>
 
 <table>
   <thead>
@@ -1118,6 +1134,8 @@ Chronicles-OCR 维护两个互补的多任务排行榜。古文字榜包含 Spot
     </tr>
   </tbody>
 </table>
+
+</details>
 
 > **隶** = 隶书, **楷** = 楷书, **行** = 行书, **草** = 草书。**加粗** = 最佳。
 

@@ -64,6 +64,13 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
 
 ### Archaic Script Leaderboard
 
+<p align="center">
+  <img src="assets/leaderboard_archaic.svg" width="100%" alt="Archaic Script Leaderboard">
+</p>
+
+<details>
+<summary><strong>View detailed per-script results</strong></summary>
+
 <table>
   <thead>
     <tr>
@@ -679,9 +686,18 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
   </tbody>
 </table>
 
+</details>
+
 > **OB** = Oracle Bone, **Br** = Bronze, **Se** = Seal. **Bold** = best, scores are H-mean (Spot.), Accuracy (Fine./Class.), NED (Pars.).
 
 ### Mature Script Leaderboard
+
+<p align="center">
+  <img src="assets/leaderboard_mature.svg" width="100%" alt="Mature Script Leaderboard">
+</p>
+
+<details>
+<summary><strong>View detailed per-script results</strong></summary>
 
 <table>
   <thead>
@@ -1118,6 +1134,8 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
     </tr>
   </tbody>
 </table>
+
+</details>
 
 > **Cl** = Clerical, **Re** = Regular, **Ru** = Running, **Cu** = Cursive. **Bold** = best.
 
