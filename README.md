@@ -71,6 +71,24 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
 <details>
 <summary><strong>View detailed per-script results</strong></summary>
 
+<h4>Oracle Bone Script · 甲骨文</h4>
+<p align="center">
+  <img src="assets/leaderboard_oracle_bone.svg" width="100%" alt="Oracle Bone Script · 甲骨文">
+</p>
+
+<h4>Bronze Script · 金文</h4>
+<p align="center">
+  <img src="assets/leaderboard_bronze.svg" width="100%" alt="Bronze Script · 金文">
+</p>
+
+<h4>Seal Script · 篆书</h4>
+<p align="center">
+  <img src="assets/leaderboard_seal.svg" width="100%" alt="Seal Script · 篆书">
+</p>
+
+<details>
+<summary><strong>View raw HTML table</strong></summary>
+
 <table>
   <thead>
     <tr>
@@ -688,6 +706,8 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
 
 </details>
 
+</details>
+
 > **OB** = Oracle Bone, **Br** = Bronze, **Se** = Seal. **Bold** = best, scores are H-mean (Spot.), Accuracy (Fine./Class.), NED (Pars.).
 
 ### Mature Script Leaderboard
@@ -698,6 +718,29 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
 
 <details>
 <summary><strong>View detailed per-script results</strong></summary>
+
+<h4>Clerical Script · 隶书</h4>
+<p align="center">
+  <img src="assets/leaderboard_clerical.svg" width="100%" alt="Clerical Script · 隶书">
+</p>
+
+<h4>Regular Script · 楷书</h4>
+<p align="center">
+  <img src="assets/leaderboard_regular.svg" width="100%" alt="Regular Script · 楷书">
+</p>
+
+<h4>Running Script · 行书</h4>
+<p align="center">
+  <img src="assets/leaderboard_running.svg" width="100%" alt="Running Script · 行书">
+</p>
+
+<h4>Cursive Script · 草书</h4>
+<p align="center">
+  <img src="assets/leaderboard_cursive.svg" width="100%" alt="Cursive Script · 草书">
+</p>
+
+<details>
+<summary><strong>View raw HTML table</strong></summary>
 
 <table>
   <thead>
@@ -1134,6 +1177,8 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
     </tr>
   </tbody>
 </table>
+
+</details>
 
 </details>
 

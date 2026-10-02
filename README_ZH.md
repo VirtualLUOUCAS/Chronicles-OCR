@@ -71,6 +71,24 @@ Chronicles-OCR 维护两个互补的多任务排行榜。古文字榜包含 Spot
 <details>
 <summary><strong>查看各书体详细结果</strong></summary>
 
+<h4>Oracle Bone Script · 甲骨文</h4>
+<p align="center">
+  <img src="assets/leaderboard_oracle_bone.svg" width="100%" alt="Oracle Bone Script · 甲骨文">
+</p>
+
+<h4>Bronze Script · 金文</h4>
+<p align="center">
+  <img src="assets/leaderboard_bronze.svg" width="100%" alt="Bronze Script · 金文">
+</p>
+
+<h4>Seal Script · 篆书</h4>
+<p align="center">
+  <img src="assets/leaderboard_seal.svg" width="100%" alt="Seal Script · 篆书">
+</p>
+
+<details>
+<summary><strong>查看原始 HTML 表格</strong></summary>
+
 <table>
   <thead>
     <tr>
@@ -688,6 +706,8 @@ Chronicles-OCR 维护两个互补的多任务排行榜。古文字榜包含 Spot
 
 </details>
 
+</details>
+
 > **甲** = 甲骨文, **金** = 金文, **篆** = 篆书。**加粗** = 最佳。
 
 ### 成熟书体排行榜
@@ -698,6 +718,29 @@ Chronicles-OCR 维护两个互补的多任务排行榜。古文字榜包含 Spot
 
 <details>
 <summary><strong>查看各书体详细结果</strong></summary>
+
+<h4>Clerical Script · 隶书</h4>
+<p align="center">
+  <img src="assets/leaderboard_clerical.svg" width="100%" alt="Clerical Script · 隶书">
+</p>
+
+<h4>Regular Script · 楷书</h4>
+<p align="center">
+  <img src="assets/leaderboard_regular.svg" width="100%" alt="Regular Script · 楷书">
+</p>
+
+<h4>Running Script · 行书</h4>
+<p align="center">
+  <img src="assets/leaderboard_running.svg" width="100%" alt="Running Script · 行书">
+</p>
+
+<h4>Cursive Script · 草书</h4>
+<p align="center">
+  <img src="assets/leaderboard_cursive.svg" width="100%" alt="Cursive Script · 草书">
+</p>
+
+<details>
+<summary><strong>查看原始 HTML 表格</strong></summary>
 
 <table>
   <thead>
@@ -1134,6 +1177,8 @@ Chronicles-OCR 维护两个互补的多任务排行榜。古文字榜包含 Spot
     </tr>
   </tbody>
 </table>
+
+</details>
 
 </details>
 
