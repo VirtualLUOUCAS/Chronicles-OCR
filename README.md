@@ -62,77 +62,1060 @@ Chronicles-OCR maintains two complementary multi-task leaderboards. The archaic-
 
 ### Archaic Script Leaderboard
 
-| Model                  | Think | Avg Spot. | Avg Fine. | Avg Pars. | Avg Class. | OB Spot. | OB Fine. | OB Pars. | OB Class. | Br Spot. | Br Fine. | Br Pars. | Br Class. | Se Spot. | Se Fine. | Se Pars. | Se Class. |
-| :--------------------- | :---: | :-------: | :-------: | :-------: | :--------: | :------: | :------: | :------: | :-------: | :------: | :------: | :------: | :-------: | :------: | :------: | :------: | :-------: |
-| **Open-Source Models** |       |           |           |           |            |          |          |          |           |          |          |          |           |          |          |          |           |
-| <img src="assets/model_logos/intern.png" height="18" alt="InternVL"> InternVL3.5-8B |       |    0.1    |    5.9    |   0.07    |    56.6    |   0.0    |   1.0    |   0.01   |   85.8    |   0.0    |   2.2    |   0.03   |    7.0    |   0.2    |   14.5   |   0.17   |   77.0    |
-| <img src="assets/model_logos/intern.png" height="18" alt="InternVL"> InternVL3.5-A28B |       |    0.5    |   15.7    |   0.13    |    79.0    |   0.0    |   2.5    |   0.02   |   96.3    |   0.4    |   7.8    |   0.08   |   79.2    |   1.0    |   36.8   |   0.29   |   61.5    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen2.5-VL-7B |       |    0.0    |    7.4    |   0.07    |    71.8    |   0.0    |   4.0    |   0.03   |   93.8    |   0.0    |   4.5    |   0.04   |   22.5    |   0.0    |   13.8   |   0.14   |   99.2    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen2.5-VL-72B |       |    0.0    |    0.0    |   0.07    |    74.2    |   0.0    |   0.0    |   0.01   |   98.0    |   0.0    |   0.0    |   0.04   |   26.0    |   0.0    |   0.0    |   0.16   |   98.5    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-2B |       |    2.1    |   10.7    |   0.12    |    73.0    |   0.0    |   1.4    |   0.00   |   96.6    |   0.8    |   6.8    |   0.06   |   36.5    |   5.7    |   24.0   |   0.31   |   85.8    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-8B |       |    3.4    |   17.3    |   0.18    |    73.7    |   0.2    |   3.4    |   0.01   |   98.6    |   2.5    |   11.0   |   0.10   |   24.0    |   7.5    |   37.5   |   0.42   |   98.5    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-8B |   ✓   |    1.0    |    9.1    |   0.10    |    67.3    |   0.0    |   3.7    |   0.04   |   97.7    |   0.2    |   7.0    |   0.05   |   31.8    |   2.8    |   16.8   |   0.20   |   72.5    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-A22B |       |    7.8    |   17.5    |   0.19    |    91.8    |   0.3    |   5.4    |   0.02   |   99.2    |   6.5    |   12.2   |   0.12   |   80.2    |   16.6   |   35.0   |   0.43   |   96.0    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-A22B |   ✓   |    2.1    |   13.6    |   0.17    |    87.3    |   0.1    |   4.2    |   0.04   |   98.0    |   0.9    |   10.2   |   0.11   |   66.8    |   5.3    |   26.2   |   0.38   |   97.2    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3.5-A3B |       |    5.6    |   16.2    |   0.20    |    76.5    |   0.2    |   5.1    |   0.03   |   99.7    |   5.3    |   11.5   |   0.12   |   30.0    |   11.2   |   32.0   |   0.45   | **99.8**  |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3.5-A17B |       |    9.7    |   22.6    |   0.22    |    88.3    |   0.5    |   9.1    |   0.03   |   99.7    |   9.2    |   17.5   |   0.13   |   67.2    |   19.4   |   41.3   |   0.50   |   98.0    |
-| <img src="assets/model_logos/gemma.png" height="18" alt="Gemma"> Gemma 4 31B it |       |    2.3    |    7.0    |   0.05    |    70.0    |   0.0    |   3.1    |   0.01   |   72.6    |   1.0    |   6.5    |   0.03   |   74.8    |   6.0    |   11.2   |   0.10   |   62.7    |
-| <img src="assets/model_logos/minicpm.png" height="18" alt="MiniCPM"> MiniCPM-V 4.5 |   ✓   |    0.0    |    5.7    |   0.03    |    65.2    |   0.0    |   2.5    |   0.01   |   95.2    |   0.0    |   5.5    |   0.03   |   18.0    |   0.1    |   9.0    |   0.04   |   82.5    |
-| <img src="assets/model_logos/AllenAI.png" height="18" alt="AllenAI"> Molmo 7B-D 0924 |       |    0.0    |    0.1    |   0.00    |    20.4    |   0.0    |   0.0    |   0.01   |   40.8    |   0.0    |   0.2    |   0.00   |    0.0    |   0.0    |   0.0    |   0.00   |   20.5    |
-| <img src="assets/model_logos/AllenAI.png" height="18" alt="AllenAI"> Molmo 72B 0924 |       |    0.0    |    0.3    |   0.00    |    36.9    |   0.0    |   0.5    |   0.00   |   28.0    |   0.0    |   0.5    |   0.00   |    0.8    |   0.0    |   0.0    |   0.00   |   82.0    |
-| <img src="assets/model_logos/alibaba.png" height="18" alt="Alibaba"> Ovis2.6-30B-A3B |   ✓   |    2.5    |   11.3    |   0.11    |    60.8    |   0.1    |   2.0    |   0.02   |   89.8    |   0.7    |   7.5    |   0.06   |   13.5    |   6.8    |   24.5   |   0.25   |   79.0    |
-| <img src="assets/model_logos/glmv.png" height="18" alt="GLM"> GLM-4.5V 108B |   ✓   |    1.8    |    6.7    |   0.06    |    69.0    |   0.1    |   4.2    |   0.04   |  **100**  |   2.0    |   6.5    |   0.05   |   15.5    |   3.3    |   9.2    |   0.10   |   91.5    |
-| <img src="assets/model_logos/kimi.png" height="18" alt="Kimi"> Kimi K2.5 |       |    6.6    | **31.9 🏆** | **0.29 🏆** |    95.2    |   0.1    |   11.5   |   0.06   |  **100**  |   7.5    |   25.8   |   0.19   |   90.0    |   12.5   | **58.5** | **0.60** |   95.5    |
-| <img src="assets/model_logos/kimi.png" height="18" alt="Kimi"> Kimi K2.5 |   ✓   |    2.4    |   24.2    |   0.28    |    93.0    |   0.0    |   10.2   | **0.07** |   99.8    |   1.2    |   17.5   |   0.20   |   85.8    |   6.0    |   44.8   |   0.57   |   93.5    |
-| **Proprietary Models** |       |           |           |           |            |          |          |          |           |          |          |          |           |          |          |          |           |
-| <img src="assets/model_logos/openai.png" height="18" alt="OpenAI"> GPT-4o |       |    0.1    |    2.0    |   0.03    |    77.4    |   0.0    |   0.5    |   0.01   |   96.5    |   0.0    |   1.0    |   0.02   |   46.8    |   0.3    |   4.5    |   0.06   |   89.0    |
-| <img src="assets/model_logos/openai.png" height="18" alt="OpenAI"> GPT-5 |       |    0.5    |    4.2    |   0.06    |    85.4    |   0.0    |   4.0    |   0.01   |   98.2    |   0.0    |   4.0    |   0.04   |   60.5    |   1.6    |   4.5    |   0.12   |   97.5    |
-| <img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 1.8 |       |   11.9    |   23.3    |   0.21    |    93.0    |   0.4    |   9.2    |   0.04   |   99.5    |   9.4    |   15.8   |   0.17   |   80.5    |   26.7   |   45.0   |   0.42   |   99.0    |
-| <img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 1.8 |   ✓   |    9.8    |   19.9    |   0.22    | **95.7 🏆** |   0.4    |   8.8    |   0.05   |   99.5    |   5.8    |   14.8   |   0.18   |   90.0    |   23.3   |   36.2   |   0.43   |   97.5    |
-| <img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 2.0 Pro |       | **21.1 🏆** |   27.7    |   0.23    |    95.2    | **3.0**  |   11.0   |   0.04   |   99.5    | **19.9** | **30.8** |   0.22   | **92.2**  | **40.7** |   41.5   |   0.43   |   93.8    |
-| <img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 2.0 Pro |   ✓   |   19.8    |   24.9    |   0.27    |    95.5    |   2.4    |   11.2   |   0.05   |   99.8    |   17.8   |   26.0   | **0.26** | **92.2**  |   39.1   |   37.5   |   0.49   |   94.5    |
-| <img src="assets/model_logos/xiaomimimo.png" height="18" alt="Xiaomi"> MiMo-V2-Omni |   ✓   |    0.6    |    8.1    |   0.09    |    83.7    |   0.0    |   6.5    |   0.05   |   99.5    |   0.2    |   8.0    |   0.07   |   58.5    |   1.5    |   9.8    |   0.15   |   93.0    |
-| <img src="assets/model_logos/gemini.png" height="18" alt="Gemini"> Gemini 2.5 Pro |   ✓   |    1.0    |    7.8    |   0.09    |    83.4    |   0.0    |   5.8    |   0.05   |   99.5    |   0.2    |   7.0    |   0.06   |   80.5    |   2.8    |   10.8   |   0.14   |   70.2    |
-| <img src="assets/model_logos/gemini.png" height="18" alt="Gemini"> Gemini 3.1 Pro |   ✓   |    3.4    |   22.9    |   0.18    |    92.4    |   0.0    | **14.0** |   0.06   |   99.5    |   2.5    |   22.5   |   0.18   |   84.5    |   7.8    |   32.2   |   0.32   |   93.2    |
-| <img src="assets/model_logos/claude.png" height="18" alt="Claude"> Claude Opus 4.7 |   ✓   |    0.5    |   11.9    |   0.10    |    89.3    |   0.0    |   4.8    |   0.04   |   93.8    |   0.1    |   9.5    |   0.05   |   80.5    |   1.4    |   21.5   |   0.21   |   93.8    |
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2" align="left">Model</th>
+      <th rowspan="2" align="center">Think</th>
+      <th colspan="4" align="center">Average</th>
+      <th colspan="4" align="center">Oracle Bone</th>
+      <th colspan="4" align="center">Bronze</th>
+      <th colspan="4" align="center">Seal</th>
+    </tr>
+    <tr>
+      <th align="center">Spot.</th>
+      <th align="center">Fine.</th>
+      <th align="center">Pars.</th>
+      <th align="center">Class.</th>
+      <th align="center">Spot.</th>
+      <th align="center">Fine.</th>
+      <th align="center">Pars.</th>
+      <th align="center">Class.</th>
+      <th align="center">Spot.</th>
+      <th align="center">Fine.</th>
+      <th align="center">Pars.</th>
+      <th align="center">Class.</th>
+      <th align="center">Spot.</th>
+      <th align="center">Fine.</th>
+      <th align="center">Pars.</th>
+      <th align="center">Class.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td colspan="18" align="center"><em><strong>Open-Source Models</strong></em></td></tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/intern.png" height="18" alt="InternVL"> InternVL3.5-8B</td>
+      <td align="center"></td>
+      <td align="center">0.1</td>
+      <td align="center">5.9</td>
+      <td align="center">0.07</td>
+      <td align="center">56.6</td>
+      <td align="center">0.0</td>
+      <td align="center">1.0</td>
+      <td align="center">0.01</td>
+      <td align="center">85.8</td>
+      <td align="center">0.0</td>
+      <td align="center">2.2</td>
+      <td align="center">0.03</td>
+      <td align="center">7.0</td>
+      <td align="center">0.2</td>
+      <td align="center">14.5</td>
+      <td align="center">0.17</td>
+      <td align="center">77.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/intern.png" height="18" alt="InternVL"> InternVL3.5-A28B</td>
+      <td align="center"></td>
+      <td align="center">0.5</td>
+      <td align="center">15.7</td>
+      <td align="center">0.13</td>
+      <td align="center">79.0</td>
+      <td align="center">0.0</td>
+      <td align="center">2.5</td>
+      <td align="center">0.02</td>
+      <td align="center">96.3</td>
+      <td align="center">0.4</td>
+      <td align="center">7.8</td>
+      <td align="center">0.08</td>
+      <td align="center">79.2</td>
+      <td align="center">1.0</td>
+      <td align="center">36.8</td>
+      <td align="center">0.29</td>
+      <td align="center">61.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen2.5-VL-7B</td>
+      <td align="center"></td>
+      <td align="center">0.0</td>
+      <td align="center">7.4</td>
+      <td align="center">0.07</td>
+      <td align="center">71.8</td>
+      <td align="center">0.0</td>
+      <td align="center">4.0</td>
+      <td align="center">0.03</td>
+      <td align="center">93.8</td>
+      <td align="center">0.0</td>
+      <td align="center">4.5</td>
+      <td align="center">0.04</td>
+      <td align="center">22.5</td>
+      <td align="center">0.0</td>
+      <td align="center">13.8</td>
+      <td align="center">0.14</td>
+      <td align="center">99.2</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen2.5-VL-72B</td>
+      <td align="center"></td>
+      <td align="center">0.0</td>
+      <td align="center">0.0</td>
+      <td align="center">0.07</td>
+      <td align="center">74.2</td>
+      <td align="center">0.0</td>
+      <td align="center">0.0</td>
+      <td align="center">0.01</td>
+      <td align="center">98.0</td>
+      <td align="center">0.0</td>
+      <td align="center">0.0</td>
+      <td align="center">0.04</td>
+      <td align="center">26.0</td>
+      <td align="center">0.0</td>
+      <td align="center">0.0</td>
+      <td align="center">0.16</td>
+      <td align="center">98.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-2B</td>
+      <td align="center"></td>
+      <td align="center">2.1</td>
+      <td align="center">10.7</td>
+      <td align="center">0.12</td>
+      <td align="center">73.0</td>
+      <td align="center">0.0</td>
+      <td align="center">1.4</td>
+      <td align="center">0.00</td>
+      <td align="center">96.6</td>
+      <td align="center">0.8</td>
+      <td align="center">6.8</td>
+      <td align="center">0.06</td>
+      <td align="center">36.5</td>
+      <td align="center">5.7</td>
+      <td align="center">24.0</td>
+      <td align="center">0.31</td>
+      <td align="center">85.8</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-8B</td>
+      <td align="center"></td>
+      <td align="center">3.4</td>
+      <td align="center">17.3</td>
+      <td align="center">0.18</td>
+      <td align="center">73.7</td>
+      <td align="center">0.2</td>
+      <td align="center">3.4</td>
+      <td align="center">0.01</td>
+      <td align="center">98.6</td>
+      <td align="center">2.5</td>
+      <td align="center">11.0</td>
+      <td align="center">0.10</td>
+      <td align="center">24.0</td>
+      <td align="center">7.5</td>
+      <td align="center">37.5</td>
+      <td align="center">0.42</td>
+      <td align="center">98.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-8B</td>
+      <td align="center">✓</td>
+      <td align="center">1.0</td>
+      <td align="center">9.1</td>
+      <td align="center">0.10</td>
+      <td align="center">67.3</td>
+      <td align="center">0.0</td>
+      <td align="center">3.7</td>
+      <td align="center">0.04</td>
+      <td align="center">97.7</td>
+      <td align="center">0.2</td>
+      <td align="center">7.0</td>
+      <td align="center">0.05</td>
+      <td align="center">31.8</td>
+      <td align="center">2.8</td>
+      <td align="center">16.8</td>
+      <td align="center">0.20</td>
+      <td align="center">72.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-A22B</td>
+      <td align="center"></td>
+      <td align="center">7.8</td>
+      <td align="center">17.5</td>
+      <td align="center">0.19</td>
+      <td align="center">91.8</td>
+      <td align="center">0.3</td>
+      <td align="center">5.4</td>
+      <td align="center">0.02</td>
+      <td align="center">99.2</td>
+      <td align="center">6.5</td>
+      <td align="center">12.2</td>
+      <td align="center">0.12</td>
+      <td align="center">80.2</td>
+      <td align="center">16.6</td>
+      <td align="center">35.0</td>
+      <td align="center">0.43</td>
+      <td align="center">96.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-A22B</td>
+      <td align="center">✓</td>
+      <td align="center">2.1</td>
+      <td align="center">13.6</td>
+      <td align="center">0.17</td>
+      <td align="center">87.3</td>
+      <td align="center">0.1</td>
+      <td align="center">4.2</td>
+      <td align="center">0.04</td>
+      <td align="center">98.0</td>
+      <td align="center">0.9</td>
+      <td align="center">10.2</td>
+      <td align="center">0.11</td>
+      <td align="center">66.8</td>
+      <td align="center">5.3</td>
+      <td align="center">26.2</td>
+      <td align="center">0.38</td>
+      <td align="center">97.2</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3.5-A3B</td>
+      <td align="center"></td>
+      <td align="center">5.6</td>
+      <td align="center">16.2</td>
+      <td align="center">0.20</td>
+      <td align="center">76.5</td>
+      <td align="center">0.2</td>
+      <td align="center">5.1</td>
+      <td align="center">0.03</td>
+      <td align="center">99.7</td>
+      <td align="center">5.3</td>
+      <td align="center">11.5</td>
+      <td align="center">0.12</td>
+      <td align="center">30.0</td>
+      <td align="center">11.2</td>
+      <td align="center">32.0</td>
+      <td align="center">0.45</td>
+      <td align="center"><strong>99.8</strong></td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3.5-A17B</td>
+      <td align="center"></td>
+      <td align="center">9.7</td>
+      <td align="center">22.6</td>
+      <td align="center">0.22</td>
+      <td align="center">88.3</td>
+      <td align="center">0.5</td>
+      <td align="center">9.1</td>
+      <td align="center">0.03</td>
+      <td align="center">99.7</td>
+      <td align="center">9.2</td>
+      <td align="center">17.5</td>
+      <td align="center">0.13</td>
+      <td align="center">67.2</td>
+      <td align="center">19.4</td>
+      <td align="center">41.3</td>
+      <td align="center">0.50</td>
+      <td align="center">98.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/gemma.png" height="18" alt="Gemma"> Gemma 4 31B it</td>
+      <td align="center"></td>
+      <td align="center">2.3</td>
+      <td align="center">7.0</td>
+      <td align="center">0.05</td>
+      <td align="center">70.0</td>
+      <td align="center">0.0</td>
+      <td align="center">3.1</td>
+      <td align="center">0.01</td>
+      <td align="center">72.6</td>
+      <td align="center">1.0</td>
+      <td align="center">6.5</td>
+      <td align="center">0.03</td>
+      <td align="center">74.8</td>
+      <td align="center">6.0</td>
+      <td align="center">11.2</td>
+      <td align="center">0.10</td>
+      <td align="center">62.7</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/minicpm.png" height="18" alt="MiniCPM"> MiniCPM-V 4.5</td>
+      <td align="center">✓</td>
+      <td align="center">0.0</td>
+      <td align="center">5.7</td>
+      <td align="center">0.03</td>
+      <td align="center">65.2</td>
+      <td align="center">0.0</td>
+      <td align="center">2.5</td>
+      <td align="center">0.01</td>
+      <td align="center">95.2</td>
+      <td align="center">0.0</td>
+      <td align="center">5.5</td>
+      <td align="center">0.03</td>
+      <td align="center">18.0</td>
+      <td align="center">0.1</td>
+      <td align="center">9.0</td>
+      <td align="center">0.04</td>
+      <td align="center">82.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/AllenAI.png" height="18" alt="AllenAI"> Molmo 7B-D 0924</td>
+      <td align="center"></td>
+      <td align="center">0.0</td>
+      <td align="center">0.1</td>
+      <td align="center">0.00</td>
+      <td align="center">20.4</td>
+      <td align="center">0.0</td>
+      <td align="center">0.0</td>
+      <td align="center">0.01</td>
+      <td align="center">40.8</td>
+      <td align="center">0.0</td>
+      <td align="center">0.2</td>
+      <td align="center">0.00</td>
+      <td align="center">0.0</td>
+      <td align="center">0.0</td>
+      <td align="center">0.0</td>
+      <td align="center">0.00</td>
+      <td align="center">20.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/AllenAI.png" height="18" alt="AllenAI"> Molmo 72B 0924</td>
+      <td align="center"></td>
+      <td align="center">0.0</td>
+      <td align="center">0.3</td>
+      <td align="center">0.00</td>
+      <td align="center">36.9</td>
+      <td align="center">0.0</td>
+      <td align="center">0.5</td>
+      <td align="center">0.00</td>
+      <td align="center">28.0</td>
+      <td align="center">0.0</td>
+      <td align="center">0.5</td>
+      <td align="center">0.00</td>
+      <td align="center">0.8</td>
+      <td align="center">0.0</td>
+      <td align="center">0.0</td>
+      <td align="center">0.00</td>
+      <td align="center">82.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/alibaba.png" height="18" alt="Alibaba"> Ovis2.6-30B-A3B</td>
+      <td align="center">✓</td>
+      <td align="center">2.5</td>
+      <td align="center">11.3</td>
+      <td align="center">0.11</td>
+      <td align="center">60.8</td>
+      <td align="center">0.1</td>
+      <td align="center">2.0</td>
+      <td align="center">0.02</td>
+      <td align="center">89.8</td>
+      <td align="center">0.7</td>
+      <td align="center">7.5</td>
+      <td align="center">0.06</td>
+      <td align="center">13.5</td>
+      <td align="center">6.8</td>
+      <td align="center">24.5</td>
+      <td align="center">0.25</td>
+      <td align="center">79.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/glmv.png" height="18" alt="GLM"> GLM-4.5V 108B</td>
+      <td align="center">✓</td>
+      <td align="center">1.8</td>
+      <td align="center">6.7</td>
+      <td align="center">0.06</td>
+      <td align="center">69.0</td>
+      <td align="center">0.1</td>
+      <td align="center">4.2</td>
+      <td align="center">0.04</td>
+      <td align="center"><strong>100</strong></td>
+      <td align="center">2.0</td>
+      <td align="center">6.5</td>
+      <td align="center">0.05</td>
+      <td align="center">15.5</td>
+      <td align="center">3.3</td>
+      <td align="center">9.2</td>
+      <td align="center">0.10</td>
+      <td align="center">91.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/kimi.png" height="18" alt="Kimi"> Kimi K2.5</td>
+      <td align="center"></td>
+      <td align="center">6.6</td>
+      <td align="center"><strong>31.9 🏆</strong></td>
+      <td align="center"><strong>0.29 🏆</strong></td>
+      <td align="center">95.2</td>
+      <td align="center">0.1</td>
+      <td align="center">11.5</td>
+      <td align="center">0.06</td>
+      <td align="center"><strong>100</strong></td>
+      <td align="center">7.5</td>
+      <td align="center">25.8</td>
+      <td align="center">0.19</td>
+      <td align="center">90.0</td>
+      <td align="center">12.5</td>
+      <td align="center"><strong>58.5</strong></td>
+      <td align="center"><strong>0.60</strong></td>
+      <td align="center">95.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/kimi.png" height="18" alt="Kimi"> Kimi K2.5</td>
+      <td align="center">✓</td>
+      <td align="center">2.4</td>
+      <td align="center">24.2</td>
+      <td align="center">0.28</td>
+      <td align="center">93.0</td>
+      <td align="center">0.0</td>
+      <td align="center">10.2</td>
+      <td align="center"><strong>0.07</strong></td>
+      <td align="center">99.8</td>
+      <td align="center">1.2</td>
+      <td align="center">17.5</td>
+      <td align="center">0.20</td>
+      <td align="center">85.8</td>
+      <td align="center">6.0</td>
+      <td align="center">44.8</td>
+      <td align="center">0.57</td>
+      <td align="center">93.5</td>
+    </tr>
+    <tr><td colspan="18" align="center"><em><strong>Proprietary Models</strong></em></td></tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/openai.png" height="18" alt="OpenAI"> GPT-4o</td>
+      <td align="center"></td>
+      <td align="center">0.1</td>
+      <td align="center">2.0</td>
+      <td align="center">0.03</td>
+      <td align="center">77.4</td>
+      <td align="center">0.0</td>
+      <td align="center">0.5</td>
+      <td align="center">0.01</td>
+      <td align="center">96.5</td>
+      <td align="center">0.0</td>
+      <td align="center">1.0</td>
+      <td align="center">0.02</td>
+      <td align="center">46.8</td>
+      <td align="center">0.3</td>
+      <td align="center">4.5</td>
+      <td align="center">0.06</td>
+      <td align="center">89.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/openai.png" height="18" alt="OpenAI"> GPT-5</td>
+      <td align="center"></td>
+      <td align="center">0.5</td>
+      <td align="center">4.2</td>
+      <td align="center">0.06</td>
+      <td align="center">85.4</td>
+      <td align="center">0.0</td>
+      <td align="center">4.0</td>
+      <td align="center">0.01</td>
+      <td align="center">98.2</td>
+      <td align="center">0.0</td>
+      <td align="center">4.0</td>
+      <td align="center">0.04</td>
+      <td align="center">60.5</td>
+      <td align="center">1.6</td>
+      <td align="center">4.5</td>
+      <td align="center">0.12</td>
+      <td align="center">97.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 1.8</td>
+      <td align="center"></td>
+      <td align="center">11.9</td>
+      <td align="center">23.3</td>
+      <td align="center">0.21</td>
+      <td align="center">93.0</td>
+      <td align="center">0.4</td>
+      <td align="center">9.2</td>
+      <td align="center">0.04</td>
+      <td align="center">99.5</td>
+      <td align="center">9.4</td>
+      <td align="center">15.8</td>
+      <td align="center">0.17</td>
+      <td align="center">80.5</td>
+      <td align="center">26.7</td>
+      <td align="center">45.0</td>
+      <td align="center">0.42</td>
+      <td align="center">99.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 1.8</td>
+      <td align="center">✓</td>
+      <td align="center">9.8</td>
+      <td align="center">19.9</td>
+      <td align="center">0.22</td>
+      <td align="center"><strong>95.7 🏆</strong></td>
+      <td align="center">0.4</td>
+      <td align="center">8.8</td>
+      <td align="center">0.05</td>
+      <td align="center">99.5</td>
+      <td align="center">5.8</td>
+      <td align="center">14.8</td>
+      <td align="center">0.18</td>
+      <td align="center">90.0</td>
+      <td align="center">23.3</td>
+      <td align="center">36.2</td>
+      <td align="center">0.43</td>
+      <td align="center">97.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 2.0 Pro</td>
+      <td align="center"></td>
+      <td align="center"><strong>21.1 🏆</strong></td>
+      <td align="center">27.7</td>
+      <td align="center">0.23</td>
+      <td align="center">95.2</td>
+      <td align="center"><strong>3.0</strong></td>
+      <td align="center">11.0</td>
+      <td align="center">0.04</td>
+      <td align="center">99.5</td>
+      <td align="center"><strong>19.9</strong></td>
+      <td align="center"><strong>30.8</strong></td>
+      <td align="center">0.22</td>
+      <td align="center"><strong>92.2</strong></td>
+      <td align="center"><strong>40.7</strong></td>
+      <td align="center">41.5</td>
+      <td align="center">0.43</td>
+      <td align="center">93.8</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 2.0 Pro</td>
+      <td align="center">✓</td>
+      <td align="center">19.8</td>
+      <td align="center">24.9</td>
+      <td align="center">0.27</td>
+      <td align="center">95.5</td>
+      <td align="center">2.4</td>
+      <td align="center">11.2</td>
+      <td align="center">0.05</td>
+      <td align="center">99.8</td>
+      <td align="center">17.8</td>
+      <td align="center">26.0</td>
+      <td align="center"><strong>0.26</strong></td>
+      <td align="center"><strong>92.2</strong></td>
+      <td align="center">39.1</td>
+      <td align="center">37.5</td>
+      <td align="center">0.49</td>
+      <td align="center">94.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/xiaomimimo.png" height="18" alt="Xiaomi"> MiMo-V2-Omni</td>
+      <td align="center">✓</td>
+      <td align="center">0.6</td>
+      <td align="center">8.1</td>
+      <td align="center">0.09</td>
+      <td align="center">83.7</td>
+      <td align="center">0.0</td>
+      <td align="center">6.5</td>
+      <td align="center">0.05</td>
+      <td align="center">99.5</td>
+      <td align="center">0.2</td>
+      <td align="center">8.0</td>
+      <td align="center">0.07</td>
+      <td align="center">58.5</td>
+      <td align="center">1.5</td>
+      <td align="center">9.8</td>
+      <td align="center">0.15</td>
+      <td align="center">93.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/gemini.png" height="18" alt="Gemini"> Gemini 2.5 Pro</td>
+      <td align="center">✓</td>
+      <td align="center">1.0</td>
+      <td align="center">7.8</td>
+      <td align="center">0.09</td>
+      <td align="center">83.4</td>
+      <td align="center">0.0</td>
+      <td align="center">5.8</td>
+      <td align="center">0.05</td>
+      <td align="center">99.5</td>
+      <td align="center">0.2</td>
+      <td align="center">7.0</td>
+      <td align="center">0.06</td>
+      <td align="center">80.5</td>
+      <td align="center">2.8</td>
+      <td align="center">10.8</td>
+      <td align="center">0.14</td>
+      <td align="center">70.2</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/gemini.png" height="18" alt="Gemini"> Gemini 3.1 Pro</td>
+      <td align="center">✓</td>
+      <td align="center">3.4</td>
+      <td align="center">22.9</td>
+      <td align="center">0.18</td>
+      <td align="center">92.4</td>
+      <td align="center">0.0</td>
+      <td align="center"><strong>14.0</strong></td>
+      <td align="center">0.06</td>
+      <td align="center">99.5</td>
+      <td align="center">2.5</td>
+      <td align="center">22.5</td>
+      <td align="center">0.18</td>
+      <td align="center">84.5</td>
+      <td align="center">7.8</td>
+      <td align="center">32.2</td>
+      <td align="center">0.32</td>
+      <td align="center">93.2</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/claude.png" height="18" alt="Claude"> Claude Opus 4.7</td>
+      <td align="center">✓</td>
+      <td align="center">0.5</td>
+      <td align="center">11.9</td>
+      <td align="center">0.10</td>
+      <td align="center">89.3</td>
+      <td align="center">0.0</td>
+      <td align="center">4.8</td>
+      <td align="center">0.04</td>
+      <td align="center">93.8</td>
+      <td align="center">0.1</td>
+      <td align="center">9.5</td>
+      <td align="center">0.05</td>
+      <td align="center">80.5</td>
+      <td align="center">1.4</td>
+      <td align="center">21.5</td>
+      <td align="center">0.21</td>
+      <td align="center">93.8</td>
+    </tr>
+  </tbody>
+</table>
 
 > **OB** = Oracle Bone, **Br** = Bronze, **Se** = Seal. **Bold** = best, scores are H-mean (Spot.), Accuracy (Fine./Class.), NED (Pars.).
 
 ### Mature Script Leaderboard
 
-| Model                  | Think | Avg Pars. | Avg Class. | Cl Pars. | Cl Class. | Re Pars. | Re Class. | Ru Pars. | Ru Class. | Cu Pars. | Cu Class. |
-| :--------------------- | :---: | :-------: | :--------: | :------: | :-------: | :------: | :-------: | :------: | :-------: | :------: | :-------: |
-| **Open-Source Models** |       |           |            |          |           |          |           |          |           |          |           |
-| <img src="assets/model_logos/intern.png" height="18" alt="InternVL"> InternVL3.5-8B |       |   0.40    |    39.8    |   0.41   |    1.8    |   0.51   |   69.4    |   0.38   |   52.9    |   0.30   |   35.0    |
-| <img src="assets/model_logos/intern.png" height="18" alt="InternVL"> InternVL3.5-A28B |       |   0.56    |    63.1    |   0.54   |   28.5    |   0.69   |   85.5    |   0.56   |   63.3    |   0.46   |   75.2    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen2.5-VL-7B |       |   0.45    |    38.0    |   0.54   |    8.0    |   0.62   |   17.0    |   0.42   |   36.4    |   0.21   |   90.5    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen2.5-VL-72B |       |   0.49    |    63.0    |   0.59   |   18.0    |   0.66   |   91.5    |   0.46   |   56.6    |   0.26   |   86.0    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-2B |       |   0.56    |    37.0    |   0.61   |    5.5    |   0.71   |   11.8    |   0.50   |   37.9    |   0.42   |   93.0    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-8B |       |   0.66    |    67.5    |   0.69   |   32.5    |   0.77   | **97.2**  |   0.64   |   59.1    |   0.56   |   81.0    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-8B |   ✓   |   0.50    |    50.1    |   0.52   |   11.2    |   0.64   |   79.7    |   0.51   |   53.4    |   0.32   |   56.2    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-A22B |       |   0.67    |    70.6    |   0.69   |   36.5    |   0.73   |   95.5    |   0.66   |   68.3    |   0.59   |   82.0    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-A22B |   ✓   |   0.65    |    66.2    |   0.67   |   31.0    |   0.75   |   93.5    |   0.65   |   62.3    |   0.54   |   78.0    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3.5-A3B |       |   0.71    |    70.2    |   0.79   |   36.8    |   0.81   |   84.2    |   0.68   |   75.6    |   0.57   |   84.2    |
-| <img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3.5-A17B |       | **0.74 🏆** |    74.5    | **0.81** |   52.0    |   0.81   |   81.3    |   0.67   |   75.3    |   0.66   |   89.4    |
-| <img src="assets/model_logos/gemma.png" height="18" alt="Gemma"> Gemma 4 31B it |       |   0.34    |    60.3    |   0.37   |    9.6    |   0.56   |   81.9    |   0.33   |   65.0    |   0.09   |   84.5    |
-| <img src="assets/model_logos/minicpm.png" height="18" alt="MiniCPM"> MiniCPM-V 4.5 |   ✓   |   0.40    |    49.0    |   0.45   |    2.8    |   0.61   |   87.5    |   0.38   |   56.9    |   0.15   |   48.8    |
-| <img src="assets/model_logos/AllenAI.png" height="18" alt="AllenAI"> Molmo 7B-D 0924 |       |   0.01    |    18.8    |   0.01   | **70.8**  |   0.01   |    3.0    |   0.01   |    0.7    |   0.01   |    0.5    |
-| <img src="assets/model_logos/AllenAI.png" height="18" alt="AllenAI"> Molmo 72B 0924 |       |   0.00    |    9.8     |   0.00   |    6.8    |   0.01   |   16.5    |   0.01   |    3.2    |   0.00   |   12.8    |
-| <img src="assets/model_logos/alibaba.png" height="18" alt="Alibaba"> Ovis2.6-30B-A3B |   ✓   |   0.54    |    42.6    |   0.54   |    8.5    |   0.63   |   77.9    |   0.57   |   71.6    |   0.42   |   12.2    |
-| <img src="assets/model_logos/glmv.png" height="18" alt="GLM"> GLM-4.5V 108B |   ✓   |   0.43    |    60.2    |   0.45   |   11.5    |   0.61   |   84.5    |   0.44   |   63.3    |   0.23   |   81.5    |
-| <img src="assets/model_logos/kimi.png" height="18" alt="Kimi"> Kimi K2.5 |       |   0.72    | **78.1 🏆** |   0.73   |   70.2    |   0.78   |   78.2    |   0.72   |   77.8    |   0.66   |   86.0    |
-| <img src="assets/model_logos/kimi.png" height="18" alt="Kimi"> Kimi K2.5 |   ✓   |   0.70    |    75.1    |   0.75   |   68.5    |   0.78   |   81.7    |   0.60   |   65.3    | **0.66** |   84.8    |
-| **Proprietary Models** |       |           |            |          |           |          |           |          |           |          |           |
-| <img src="assets/model_logos/openai.png" height="18" alt="OpenAI"> GPT-4o |       |   0.29    |    59.9    |   0.35   |   20.5    |   0.47   |   83.0    |   0.24   |   55.6    |   0.12   |   80.5    |
-| <img src="assets/model_logos/openai.png" height="18" alt="OpenAI"> GPT-5 |       |   0.37    |    61.2    |   0.50   |   36.2    |   0.57   |   59.6    |   0.21   | **78.1**  |   0.18   |   71.0    |
-| <img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 1.8 |       |   0.69    |    73.1    |   0.68   |   45.5    |   0.79   |   92.7    |   0.69   |   71.8    |   0.61   |   82.5    |
-| <img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 1.8 |   ✓   |   0.66    |    72.8    |   0.69   |   48.0    |   0.78   |   89.2    |   0.57   |   73.3    |   0.60   |   80.8    |
-| <img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 2.0 Pro |       |   0.72    | **78.1 🏆** |   0.75   |   60.8    |   0.81   |   82.0    | **0.73** |   77.6    |   0.62   |   92.2    |
-| <img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 2.0 Pro |   ✓   |   0.72    |    76.8    |   0.76   |   61.8    |   0.80   |   82.0    |   0.65   |   74.3    |   0.66   |   89.0    |
-| <img src="assets/model_logos/xiaomimimo.png" height="18" alt="Xiaomi"> MiMo-V2-Omni |   ✓   |   0.56    |    64.6    |   0.62   |   40.0    |   0.71   |   80.7    |   0.58   |   73.3    |   0.36   |   64.2    |
-| <img src="assets/model_logos/gemini.png" height="18" alt="Gemini"> Gemini 2.5 Pro |   ✓   |   0.53    |    56.8    |   0.67   |   33.2    |   0.72   |   39.6    |   0.49   |   59.4    |   0.23   |   95.0    |
-| <img src="assets/model_logos/gemini.png" height="18" alt="Gemini"> Gemini 3.1 Pro |   ✓   |   0.70    |    72.6    |   0.80   |   61.0    | **0.83** |   62.7    |   0.66   |   71.1    |   0.52   | **95.8**  |
-| <img src="assets/model_logos/claude.png" height="18" alt="Claude"> Claude Opus 4.7 |   ✓   |   0.49    |    66.8    |   0.53   |   50.2    |   0.63   |   74.4    |   0.44   |   56.6    |   0.38   |   86.0    |
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2" align="left">Model</th>
+      <th rowspan="2" align="center">Think</th>
+      <th colspan="2" align="center">Average</th>
+      <th colspan="2" align="center">Clerical</th>
+      <th colspan="2" align="center">Regular</th>
+      <th colspan="2" align="center">Running</th>
+      <th colspan="2" align="center">Cursive</th>
+    </tr>
+    <tr>
+      <th align="center">Pars.</th>
+      <th align="center">Class.</th>
+      <th align="center">Pars.</th>
+      <th align="center">Class.</th>
+      <th align="center">Pars.</th>
+      <th align="center">Class.</th>
+      <th align="center">Pars.</th>
+      <th align="center">Class.</th>
+      <th align="center">Pars.</th>
+      <th align="center">Class.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td colspan="12" align="center"><em><strong>Open-Source Models</strong></em></td></tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/intern.png" height="18" alt="InternVL"> InternVL3.5-8B</td>
+      <td align="center"></td>
+      <td align="center">0.40</td>
+      <td align="center">39.8</td>
+      <td align="center">0.41</td>
+      <td align="center">1.8</td>
+      <td align="center">0.51</td>
+      <td align="center">69.4</td>
+      <td align="center">0.38</td>
+      <td align="center">52.9</td>
+      <td align="center">0.30</td>
+      <td align="center">35.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/intern.png" height="18" alt="InternVL"> InternVL3.5-A28B</td>
+      <td align="center"></td>
+      <td align="center">0.56</td>
+      <td align="center">63.1</td>
+      <td align="center">0.54</td>
+      <td align="center">28.5</td>
+      <td align="center">0.69</td>
+      <td align="center">85.5</td>
+      <td align="center">0.56</td>
+      <td align="center">63.3</td>
+      <td align="center">0.46</td>
+      <td align="center">75.2</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen2.5-VL-7B</td>
+      <td align="center"></td>
+      <td align="center">0.45</td>
+      <td align="center">38.0</td>
+      <td align="center">0.54</td>
+      <td align="center">8.0</td>
+      <td align="center">0.62</td>
+      <td align="center">17.0</td>
+      <td align="center">0.42</td>
+      <td align="center">36.4</td>
+      <td align="center">0.21</td>
+      <td align="center">90.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen2.5-VL-72B</td>
+      <td align="center"></td>
+      <td align="center">0.49</td>
+      <td align="center">63.0</td>
+      <td align="center">0.59</td>
+      <td align="center">18.0</td>
+      <td align="center">0.66</td>
+      <td align="center">91.5</td>
+      <td align="center">0.46</td>
+      <td align="center">56.6</td>
+      <td align="center">0.26</td>
+      <td align="center">86.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-2B</td>
+      <td align="center"></td>
+      <td align="center">0.56</td>
+      <td align="center">37.0</td>
+      <td align="center">0.61</td>
+      <td align="center">5.5</td>
+      <td align="center">0.71</td>
+      <td align="center">11.8</td>
+      <td align="center">0.50</td>
+      <td align="center">37.9</td>
+      <td align="center">0.42</td>
+      <td align="center">93.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-8B</td>
+      <td align="center"></td>
+      <td align="center">0.66</td>
+      <td align="center">67.5</td>
+      <td align="center">0.69</td>
+      <td align="center">32.5</td>
+      <td align="center">0.77</td>
+      <td align="center"><strong>97.2</strong></td>
+      <td align="center">0.64</td>
+      <td align="center">59.1</td>
+      <td align="center">0.56</td>
+      <td align="center">81.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-8B</td>
+      <td align="center">✓</td>
+      <td align="center">0.50</td>
+      <td align="center">50.1</td>
+      <td align="center">0.52</td>
+      <td align="center">11.2</td>
+      <td align="center">0.64</td>
+      <td align="center">79.7</td>
+      <td align="center">0.51</td>
+      <td align="center">53.4</td>
+      <td align="center">0.32</td>
+      <td align="center">56.2</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-A22B</td>
+      <td align="center"></td>
+      <td align="center">0.67</td>
+      <td align="center">70.6</td>
+      <td align="center">0.69</td>
+      <td align="center">36.5</td>
+      <td align="center">0.73</td>
+      <td align="center">95.5</td>
+      <td align="center">0.66</td>
+      <td align="center">68.3</td>
+      <td align="center">0.59</td>
+      <td align="center">82.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3-VL-A22B</td>
+      <td align="center">✓</td>
+      <td align="center">0.65</td>
+      <td align="center">66.2</td>
+      <td align="center">0.67</td>
+      <td align="center">31.0</td>
+      <td align="center">0.75</td>
+      <td align="center">93.5</td>
+      <td align="center">0.65</td>
+      <td align="center">62.3</td>
+      <td align="center">0.54</td>
+      <td align="center">78.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3.5-A3B</td>
+      <td align="center"></td>
+      <td align="center">0.71</td>
+      <td align="center">70.2</td>
+      <td align="center">0.79</td>
+      <td align="center">36.8</td>
+      <td align="center">0.81</td>
+      <td align="center">84.2</td>
+      <td align="center">0.68</td>
+      <td align="center">75.6</td>
+      <td align="center">0.57</td>
+      <td align="center">84.2</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/qwen.png" height="18" alt="Qwen"> Qwen3.5-A17B</td>
+      <td align="center"></td>
+      <td align="center"><strong>0.74 🏆</strong></td>
+      <td align="center">74.5</td>
+      <td align="center"><strong>0.81</strong></td>
+      <td align="center">52.0</td>
+      <td align="center">0.81</td>
+      <td align="center">81.3</td>
+      <td align="center">0.67</td>
+      <td align="center">75.3</td>
+      <td align="center">0.66</td>
+      <td align="center">89.4</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/gemma.png" height="18" alt="Gemma"> Gemma 4 31B it</td>
+      <td align="center"></td>
+      <td align="center">0.34</td>
+      <td align="center">60.3</td>
+      <td align="center">0.37</td>
+      <td align="center">9.6</td>
+      <td align="center">0.56</td>
+      <td align="center">81.9</td>
+      <td align="center">0.33</td>
+      <td align="center">65.0</td>
+      <td align="center">0.09</td>
+      <td align="center">84.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/minicpm.png" height="18" alt="MiniCPM"> MiniCPM-V 4.5</td>
+      <td align="center">✓</td>
+      <td align="center">0.40</td>
+      <td align="center">49.0</td>
+      <td align="center">0.45</td>
+      <td align="center">2.8</td>
+      <td align="center">0.61</td>
+      <td align="center">87.5</td>
+      <td align="center">0.38</td>
+      <td align="center">56.9</td>
+      <td align="center">0.15</td>
+      <td align="center">48.8</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/AllenAI.png" height="18" alt="AllenAI"> Molmo 7B-D 0924</td>
+      <td align="center"></td>
+      <td align="center">0.01</td>
+      <td align="center">18.8</td>
+      <td align="center">0.01</td>
+      <td align="center"><strong>70.8</strong></td>
+      <td align="center">0.01</td>
+      <td align="center">3.0</td>
+      <td align="center">0.01</td>
+      <td align="center">0.7</td>
+      <td align="center">0.01</td>
+      <td align="center">0.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/AllenAI.png" height="18" alt="AllenAI"> Molmo 72B 0924</td>
+      <td align="center"></td>
+      <td align="center">0.00</td>
+      <td align="center">9.8</td>
+      <td align="center">0.00</td>
+      <td align="center">6.8</td>
+      <td align="center">0.01</td>
+      <td align="center">16.5</td>
+      <td align="center">0.01</td>
+      <td align="center">3.2</td>
+      <td align="center">0.00</td>
+      <td align="center">12.8</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/alibaba.png" height="18" alt="Alibaba"> Ovis2.6-30B-A3B</td>
+      <td align="center">✓</td>
+      <td align="center">0.54</td>
+      <td align="center">42.6</td>
+      <td align="center">0.54</td>
+      <td align="center">8.5</td>
+      <td align="center">0.63</td>
+      <td align="center">77.9</td>
+      <td align="center">0.57</td>
+      <td align="center">71.6</td>
+      <td align="center">0.42</td>
+      <td align="center">12.2</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/glmv.png" height="18" alt="GLM"> GLM-4.5V 108B</td>
+      <td align="center">✓</td>
+      <td align="center">0.43</td>
+      <td align="center">60.2</td>
+      <td align="center">0.45</td>
+      <td align="center">11.5</td>
+      <td align="center">0.61</td>
+      <td align="center">84.5</td>
+      <td align="center">0.44</td>
+      <td align="center">63.3</td>
+      <td align="center">0.23</td>
+      <td align="center">81.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/kimi.png" height="18" alt="Kimi"> Kimi K2.5</td>
+      <td align="center"></td>
+      <td align="center">0.72</td>
+      <td align="center"><strong>78.1 🏆</strong></td>
+      <td align="center">0.73</td>
+      <td align="center">70.2</td>
+      <td align="center">0.78</td>
+      <td align="center">78.2</td>
+      <td align="center">0.72</td>
+      <td align="center">77.8</td>
+      <td align="center">0.66</td>
+      <td align="center">86.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/kimi.png" height="18" alt="Kimi"> Kimi K2.5</td>
+      <td align="center">✓</td>
+      <td align="center">0.70</td>
+      <td align="center">75.1</td>
+      <td align="center">0.75</td>
+      <td align="center">68.5</td>
+      <td align="center">0.78</td>
+      <td align="center">81.7</td>
+      <td align="center">0.60</td>
+      <td align="center">65.3</td>
+      <td align="center"><strong>0.66</strong></td>
+      <td align="center">84.8</td>
+    </tr>
+    <tr><td colspan="12" align="center"><em><strong>Proprietary Models</strong></em></td></tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/openai.png" height="18" alt="OpenAI"> GPT-4o</td>
+      <td align="center"></td>
+      <td align="center">0.29</td>
+      <td align="center">59.9</td>
+      <td align="center">0.35</td>
+      <td align="center">20.5</td>
+      <td align="center">0.47</td>
+      <td align="center">83.0</td>
+      <td align="center">0.24</td>
+      <td align="center">55.6</td>
+      <td align="center">0.12</td>
+      <td align="center">80.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/openai.png" height="18" alt="OpenAI"> GPT-5</td>
+      <td align="center"></td>
+      <td align="center">0.37</td>
+      <td align="center">61.2</td>
+      <td align="center">0.50</td>
+      <td align="center">36.2</td>
+      <td align="center">0.57</td>
+      <td align="center">59.6</td>
+      <td align="center">0.21</td>
+      <td align="center"><strong>78.1</strong></td>
+      <td align="center">0.18</td>
+      <td align="center">71.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 1.8</td>
+      <td align="center"></td>
+      <td align="center">0.69</td>
+      <td align="center">73.1</td>
+      <td align="center">0.68</td>
+      <td align="center">45.5</td>
+      <td align="center">0.79</td>
+      <td align="center">92.7</td>
+      <td align="center">0.69</td>
+      <td align="center">71.8</td>
+      <td align="center">0.61</td>
+      <td align="center">82.5</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 1.8</td>
+      <td align="center">✓</td>
+      <td align="center">0.66</td>
+      <td align="center">72.8</td>
+      <td align="center">0.69</td>
+      <td align="center">48.0</td>
+      <td align="center">0.78</td>
+      <td align="center">89.2</td>
+      <td align="center">0.57</td>
+      <td align="center">73.3</td>
+      <td align="center">0.60</td>
+      <td align="center">80.8</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 2.0 Pro</td>
+      <td align="center"></td>
+      <td align="center">0.72</td>
+      <td align="center"><strong>78.1 🏆</strong></td>
+      <td align="center">0.75</td>
+      <td align="center">60.8</td>
+      <td align="center">0.81</td>
+      <td align="center">82.0</td>
+      <td align="center"><strong>0.73</strong></td>
+      <td align="center">77.6</td>
+      <td align="center">0.62</td>
+      <td align="center">92.2</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/bytedance.png" height="18" alt="ByteDance"> Seed 2.0 Pro</td>
+      <td align="center">✓</td>
+      <td align="center">0.72</td>
+      <td align="center">76.8</td>
+      <td align="center">0.76</td>
+      <td align="center">61.8</td>
+      <td align="center">0.80</td>
+      <td align="center">82.0</td>
+      <td align="center">0.65</td>
+      <td align="center">74.3</td>
+      <td align="center">0.66</td>
+      <td align="center">89.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/xiaomimimo.png" height="18" alt="Xiaomi"> MiMo-V2-Omni</td>
+      <td align="center">✓</td>
+      <td align="center">0.56</td>
+      <td align="center">64.6</td>
+      <td align="center">0.62</td>
+      <td align="center">40.0</td>
+      <td align="center">0.71</td>
+      <td align="center">80.7</td>
+      <td align="center">0.58</td>
+      <td align="center">73.3</td>
+      <td align="center">0.36</td>
+      <td align="center">64.2</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/gemini.png" height="18" alt="Gemini"> Gemini 2.5 Pro</td>
+      <td align="center">✓</td>
+      <td align="center">0.53</td>
+      <td align="center">56.8</td>
+      <td align="center">0.67</td>
+      <td align="center">33.2</td>
+      <td align="center">0.72</td>
+      <td align="center">39.6</td>
+      <td align="center">0.49</td>
+      <td align="center">59.4</td>
+      <td align="center">0.23</td>
+      <td align="center">95.0</td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/gemini.png" height="18" alt="Gemini"> Gemini 3.1 Pro</td>
+      <td align="center">✓</td>
+      <td align="center">0.70</td>
+      <td align="center">72.6</td>
+      <td align="center">0.80</td>
+      <td align="center">61.0</td>
+      <td align="center"><strong>0.83</strong></td>
+      <td align="center">62.7</td>
+      <td align="center">0.66</td>
+      <td align="center">71.1</td>
+      <td align="center">0.52</td>
+      <td align="center"><strong>95.8</strong></td>
+    </tr>
+    <tr>
+      <td align="left"><img src="assets/model_logos/claude.png" height="18" alt="Claude"> Claude Opus 4.7</td>
+      <td align="center">✓</td>
+      <td align="center">0.49</td>
+      <td align="center">66.8</td>
+      <td align="center">0.53</td>
+      <td align="center">50.2</td>
+      <td align="center">0.63</td>
+      <td align="center">74.4</td>
+      <td align="center">0.44</td>
+      <td align="center">56.6</td>
+      <td align="center">0.38</td>
+      <td align="center">86.0</td>
+    </tr>
+  </tbody>
+</table>
 
 > **Cl** = Clerical, **Re** = Regular, **Ru** = Running, **Cu** = Cursive. **Bold** = best.
 
